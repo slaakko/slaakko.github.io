@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+</head>
+<body>
+    <h2>
+        1 Introduction
+    </h2>
+
+    <p>
+        Cminor is quite a small language whose core statements and expressions are identical with statements and expressions in C#.
+        Cminor does not contain all the features of current C#. 
+        For example, value types other than <a href="../langref/basic_type.html">basic value types</a> (a.k.a "structs") are missing.
+        So are lambda expressions, closures and many other features of current C#.
+        However it is not a proper subset of C# either because Cminor has non-member functions and C# does not, for example.
+        One can say that Cminor and C# are siblings and C# is the big brother or sister of Cminor.
+    </p>
+
+    <img src="../image/csvscminor.png" width="50%" height="50%"/>
+
+    <p>
+        Currently Cminor programs can be compiled either to Cminor virtual machine instructions (intermediate code), or to native object code.
+        Support for JIT compilation (just-in-time compilation) is planned.
+        Programs compiled just to intermediate code are run in virtual machine by interpreting the intermediate instructions.
+        Programs compiled to native object code are also run in virtual machine with the help of runtime support functions built into the virtual machine.
+        Cminor programs are garbage-collected so there's no need for manual memory management.
+    </p>
+
+    <h3 id="system">
+        1.1 Cminor System Library
+    </h3>
+
+    <p>
+        The Cminor System Library has borrowed many classes from .NET Framework but the same relationship exists with Cminor System Library
+        and .NET Framework as the relationship with Cminor and C#: the .NET Framework is the big brother of Cminor System Library.
+    </p>
+
+    <p>
+        The system library contains:
+
+        <ul>
+            <li>
+                basic language facilities such as <span class="code">System.Object</span>, <span class="code">System.String</span> and
+                <span class="code">System.Exception</span> classes,
+            </li>
+            <li>
+                minimal support for text and binary I/O, for example:
+                <span class="code">System.IO.StreamReader</span>,
+                <span class="code">System.IO.StreamWriter</span>,
+                <span class="code">System.IO.BinaryReader</span>, and
+                <span class="code">System.IO.BinaryWriter</span>,
+            </li>
+            <li>
+                generic collections:
+                <span class="code">System.Collections.Generic.List</span>,
+                <span class="code">System.Collections.Generic.Set</span>,
+                <span class="code">System.Collections.Generic.Map</span>,
+                <span class="code">System.Collections.Generic.HashSet</span>, and
+                <span class="code">System.Collections.Generic.HashMap</span>,
+            </li>
+            <li>
+                threads, locks and condition variables:
+                <span class="code">System.Threading.Thread</span>,
+                <span class="code">System.Threading.Monitor</span>, and
+                <span class="code">System.Threading.ConditionVariable</span>,
+            </li>
+            <li>support for measuring time, random number generation and cryptographic hash code computation,</li>
+            <li>minimal support for Unicode such as classifying characters and obtaining their Unicode category and Unicode name,</li>
+            <li>parsing library <span class="code">System.Text.Parsing</span>.</li>
+        </ul>
+    </p>
+
+    <h3 id="platforms">
+        1.2 Supported Platforms
+    </h3>
+
+    <p>
+        Currently Cminor runs on Windows x64 and Linux x86_64 platforms.
+    </p>
+
+    <h3 id="license">
+        1.3 License
+    </h3>
+
+    <p>
+        Cminor is distributed under the <a href=../LICENSE.txt>MIT License</a>.
+    </p>
+
+    <h3 id="motivation">
+        1.4 Motivation
+    </h3>
+
+    <p>
+        Motivation for creating this language, its compiler and virtual machine, was to learn the basics of virtual machine architecture and garbage collection,
+        and to experiment with them. My implementation cannot naturally compete with industrial strength languages like C# or Java, but I hope that someone finds it useful,
+        will study how it's done, or just enjoy experimenting with it. The source code of the compiler, virtual machine and libraries is available in 
+        <a href="http://github.com/slaakko/cminor">http://github.com/slaakko/cminor</a>.
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Lexical Structure</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css"/>
+</head>
+
+<body>
+
+<h2 id="lexical-structure">
+    1 Lexical Structure
+</h2>
+
+<h3 id="whitespace">
+    1.1 White Space and Comments
+</h3>
+
+<h4 id="whitespace-syntax">
+    1.1.1 Syntax
+</h4>
+
+<table class="grammar">
+    <tr>
+        <td class="rulename" id="white-space-and-comments">white-space-and-comments</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            (<span class="rulename"><a href="#space">space</a></span> | <span class="rulename"><a href="#comment">comment</a></span>)+
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="space">space</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            'any ASCII whitespace character'
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="comment">comment</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#line-comment">line-comment</a></span> |
+            <span class="rulename"><a href="#block-comment">block-comment</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="line-comment">line-comment</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="terminal">//</span> [<span class="grammarop">^</span><span class="terminal">\n</span><span class="terminal">\r</span>]* <span class="rulename"><a href="#new-line"</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="block-comment">block-comment</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="terminal">/*</span> (<span class="rulename">any-char</span><span class="grammarop">&minus;</span><span class="terminal">*/</span>)* <span class="terminal">*/</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="any-char">any-char</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            'any character'
+        </td>
+    </tr>
+</table>
+
+    <p class="note">
+        For an explanation of the used syntax notation, see <a href="syntax_notation.html">Appendix A</a>.
+    </p>
+
+<h3 id="keywords">
+    1.2 Keywords
+</h3>
+
+<h4 id="keywords-syntax">
+    1.2.1 Syntax
+</h4>
+
+<table class="grammar">
+    <tr>
+        <td class="rulename" id="keyword">keyword</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="kw">abstract</span> | <span class="kw">as</span> | <span class="kw">base</span> | <span class="kw">bool</span> | 
+            <span class="kw">break</span> | <span class="kw">byte</span> | <span class="kw">case</span> | <span class="kw">cast</span> |
+            <span class="kw">catch</span> | <span class="kw">char</span> | <span class="kw">class</span> | <span class="kw">const</span> |
+            <span class="kw">continue</span> | <span class="kw">default</span> | <span class="kw">delegate</span> | <span class="kw">do</span> |
+            <span class="kw">double</span> | <span class="kw">else</span> | <span class="kw">enum</span> | <span class="kw">false</span> |
+            <span class="kw">finally</span> | <span class="kw">float</span> | <span class="kw">for</span> | <span class="kw">foreach</span> |
+            <span class="kw">goto</span> | <span class="kw">if</span> | <span class="kw">in</span> | <span class="kw">inline</span> |
+            <span class="kw">int</span> | <span class="kw">interface</span> | <span class="kw">internal</span> | <span class="kw">is</span> |
+            <span class="kw">lock</span> | <span class="kw">long</span> | <span class="kw">namespace</span> | <span class="kw">new</span> | 
+            <span class="kw">null</span> | <span class="kw">object</span> | <span class="kw">operator</span> | <span class="kw">override</span> | 
+            <span class="kw">private</span> | <span class="kw">protected</span> | <span class="kw">public</span> | <span class="kw">ref</span> | 
+            <span class="kw">return</span> | <span class="kw">sbyte</span> | <span class="kw">short</span> | <span class="kw">static</span> | 
+            <span class="kw">string</span> | <span class="kw">switch</span> | <span class="kw">this</span> | <span class="kw">throw</span> | 
+            <span class="kw">true</span> | <span class="kw">try</span> | <span class="kw">ulong</span> | <span class="kw">uint</span> | 
+            <span class="kw">ushort</span> | <span class="kw">using</span> | <span class="kw">virtual</span> | <span class="kw">void</span> | 
+            <span class="kw">while</span>
+        </td>
+    </tr>
+</table>
+
+<h3 id="identifiers">1.3 Identifiers</h3>
+
+<h4 id="identifiers-syntax">
+    1.3.1 Syntax
+</h4>
+
+<table class="grammar">
+    <tr>
+        <td class="rulename" id="identifier">identifier</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#id-char-sequence">id-char-sequence</a></span><span class="grammarop">&minus;</span><span class="rulename"><a href="#keyword">keyword</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="qualified-id">qualified-id</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#identifier">identifier</a></span> (<span class="terminal">.</span><span class="rulename"><a href="#identifier">identifier</a></span>)*
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="id-char-sequence">id-char-sequence</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            (<span class="rulename"><a href="#letter">letter</a></span> | <span class="terminal">_</span> )
+            (<span class="rulename"><a href="#letter">letter</a></span> | <span class="rulename"><a href="#digit">digit</a></span> | <span class="terminal">_</span> )*
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="letter">letter</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            'any Unicode letter character (category Lu, Ll, LC, Lm, Lo and Lt) encoded using UTF-8 encoding'
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="digit">digit</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            'any Unicode number character (category Nd, Nl and No) encoded using UTF-8 encoding'
+        </td>
+    </tr>
+</table>
+
+<h3 id="literals">1.4 Literals</h3>
+
+<h4 id="literals-syntax">
+    1.4.1 Syntax
+</h4>
+
+<table class="grammar">
+    <tr>
+        <td class="rulename" id="literal">literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#boolean-literal">boolean-literal</a></span> |
+            <span class="rulename"><a href="#floating-literal">floating-literal</a></span> |
+            <span class="rulename"><a href="#integer-literal">integer-literal</a></span> |
+            <span class="rulename"><a href="#char-literal">char-literal</a></span> |
+            <span class="rulename"><a href="#string-literal">string-literal</a></span> |<br/>
+            <span class="rulename"><a href="#null-literal">null-literal</a></span> 
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="boolean-literal">boolean-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="kw">true</span> | <span class="kw">false</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="floating-literal">floating-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#floating-literal-value">floating-literal-value</a></span>
+            [<span class="terminal">f</span><span class="terminal">F</span>]?
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="floating-literal-value">floating-literal-value</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#fractional-floating-literal">fractional-floating-literal</a></span> |
+            <span class="rulename"><a href="#exponent-floating-literal">exponent-floating-literal</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="fractional-floating-literal">fractional-floating-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span>?
+            <span class="terminal">.</span>
+            <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span>
+            <span class="rulename"><a href="#exponent-part">exponent-part</a></span>? |<br />
+            <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span>
+            <span class="terminal">.</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="exponent-floating-literal">exponent-floating-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span>
+            <span class="rulename"><a href="#exponent-part">exponent-part</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="exponent-part">exponent-part</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            [<span class="terminal">eE</span>]
+            <span class="rulename"><a href="#sign">sign</a></span>?
+            <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="integer-literal">integer-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#integer-literal-value">integer-literal-value</a></span>
+            [<span class="terminal">uU</span>]?
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="integer-literal-value">integer-literal-value</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#hexadecimal-integer-literal">hexadecimal-integer-literal</a></span> | 
+            <span class="rulename"><a href="#decimal-integer-literal">decimal-integer-literal</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="hexadecimal-integer-literal">hexadecimal-integer-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            ("0x" | "0X") <span class="rulename"><a href="#hexadecimal-digit-sequence">hexadecimal-digit-sequence</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="decimal-integer-literal">decimal-integer-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="char-literal">char-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="terminal">&apos;</span> ([<span class="grammarop">^</span><span class="terminal">\n\r</span>]+ | 
+            <span class="rulename"><a href="#char-escape">char-escape</a></span>) <span class="terminal">&apos;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="string-literal">string-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="terminal">@&quot;</span> [<span class="grammarop">^</span><span class="terminal">&quot;</span>]* 
+            <span class="terminal">&quot;</span> |<br/>
+            <span class="terminal">&quot;</span> 
+            ([<span class="grammarop">^</span><span class="terminal">&quot;\\\r\n</span>]+ |
+            <span class="rulename"><a href="#char-escape">char-escape</a></span>)*
+            <span class="terminal">&quot;</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="null-literal">null-literal</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="kw">null</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="char-escape">char-escape</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="terminal">\\</span><br />
+            (   [<span class="terminal">xX</span>] <span class="rulename"><a href="#hexadecimal-digit-sequence">hexadecimal-digit-sequence</a></span> |
+                [<span class="terminal">dD</span>] <span class="rulename"><a href="#decimal-digit-sequence">decimal-digit-sequence</a></span> | <br />
+                <span class="rulename"><a href="#octal-digit-sequence">octal-digit-sequence</a></span> |
+                <span class="terminal">u</span> <span class="rulename"><a href="#four-hex-digits">four-hex-digits</a></span> |
+                <span class="terminal">U</span> <span class="rulename"><a href="#eight-hex-digits">eight-hex-digits</a></span> | <br />
+                <span class="terminal">a</span> | <span class="terminal">b</span> | <span class="terminal">f</span> | <span class="terminal">n</span> |
+                <span class="terminal">r</span> | <span class="terminal">t</span> | <span class="terminal">v</span> | <span class="rulename"><a href="#any-char">any-char</a></span>
+            <br />
+            )
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="decimal-digit-sequence">decimal-digit-sequence</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            [<span class="terminal">0</span><span class="grammarop">&minus;</span><span class="terminal">9</span>]+
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="hexadecimal-digit-sequence">hexadecimal-digit-sequence</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>+
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="four-hex-digits">four-hex-digits</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="eight-hex-digits">eight-hex-digits</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+            <span class="rulename"><a href="#hex-digit">hex-digit</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="hex-digit">hex-digit</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            [<span class="terminal">0</span><span class="grammarop">&minus;</span><span class="terminal">9</span>
+            <span class="terminal">a</span><span class="grammarop">&minus;</span><span class="terminal">f</span>
+            <span class="terminal">A</span><span class="grammarop">&minus;</span><span class="terminal">F</span>]
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="octal-digit-sequence">octal-digit-sequence</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            [<span class="terminal">0</span><span class="grammarop">&minus;</span><span class="terminal">7</span>]+
+        </td>
+    </tr>
+    <tr>
+        <td class="rulename" id="sign">sign</td>
+        <td class="prodsep">&rarr;</td>
+        <td class="rulecontent">
+            <span class="terminal">+</span> | <span class="terminal">-</span>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

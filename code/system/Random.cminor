@@ -1,0 +1,20 @@
+//  ===========================================================
+//  Mersenne Twister based pseudorandom number engine.
+//  The InitRand() function does not need to be called unless a 
+//  reproducible sequence of pseudorandom numbers are needed.
+//  If InitRand() is not called, the random number generator is 
+//  initialized with a random seed obtained from the system.
+//  Each application thread has its own generator instance.
+//  ===========================================================
+
+namespace System
+{
+    [vmf=initrand]
+    public extern void InitRand(uint seed); 
+
+    [vmf=random]
+    public extern uint Random();
+
+    [vmf=rand64]
+    public extern ulong Random64();
+}

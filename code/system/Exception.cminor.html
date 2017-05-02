@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Exception.cminor</title>
+    <link rel="stylesheet" type="text/css" href="../../style/code.css"/>
+</head>
+<body>
+<pre>
+<span class="comment">//  ============================================================</span>
+<span class="comment">//  System.Exception is the base class of all Cminor exceptions.</span>
+<span class="comment">//  System.Exception.ToString() method returns a string that</span>
+<span class="comment">//  contains the class name of the exception, a stack trace, and</span>
+<span class="comment">//  the error message while System.Exception.Message contains</span>
+<span class="comment">//  just the error message.</span>
+<span class="comment">//</span>
+<span class="comment">//  System.SystemException is the base class of Cminor system</span>
+<span class="comment">//  exceptions just as System.NullReferenceException,</span>
+<span class="comment">//  System.IndexOutOfRangeException and</span>
+<span class="comment">//  System.InvalidCastException, that are throw by the virtual</span>
+<span class="comment">//  machine when member of null tried to be accessed, an array</span>
+<span class="comment">//  index is out of range, or type of object or value does not</span>
+<span class="comment">//  allow it to be casted to the type it is tried to cast to.</span>
+<span class="comment">//  ============================================================</span>
+
+<span class="keyword">using</span> <span class="identifier">System.Text</span><span class="other">;</span>
+
+<span class="keyword">namespace</span> <span class="identifier">System</span>
+<span class="other">{</span>
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">Exception</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">Exception</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+            <span class="keyword">this</span><span class="other">.</span><span class="identifier">message</span> <span class="other">=</span> <span class="identifier">message</span><span class="other">;</span>
+        <span class="other">}</span>
+        <span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">SetStackTrace</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">stackTrace</span><span class="other">)</span>
+        <span class="other">{</span>
+            <span class="keyword">this</span><span class="other">.</span><span class="identifier">stackTrace</span> <span class="other">=</span> <span class="identifier">stackTrace</span><span class="other">;</span>
+        <span class="other">}</span>
+        <span class="keyword">public</span> <span class="keyword">string</span> <span class="identifier">Message</span>
+        <span class="other">{</span>
+            <span class="identifier">get</span> <span class="other">{</span> <span class="keyword">return</span> <span class="identifier">message</span><span class="other">;</span> <span class="other">}</span>
+        <span class="other">}</span>
+        <span class="keyword">public</span> <span class="keyword">string</span> <span class="identifier">StackTrace</span>
+        <span class="other">{</span>
+            <span class="identifier">get</span> <span class="other">{</span> <span class="keyword">return</span> <span class="identifier">stackTrace</span><span class="other">;</span> <span class="other">}</span>
+        <span class="other">}</span>
+        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">string</span> <span class="identifier">ToString</span><span class="other">(</span><span class="other">)</span>
+        <span class="other">{</span>
+            <span class="identifier">StringBuilder</span> <span class="identifier">s</span> <span class="other">=</span> <span class="keyword">new</span> <span class="identifier">StringBuilder</span><span class="other">(</span><span class="other">)</span><span class="other">;</span>
+            <span class="identifier">s.Append</span><span class="other">(</span><span class="keyword">base</span><span class="other">.</span><span class="identifier">ToString</span><span class="other">(</span><span class="other">)</span><span class="other">)</span><span class="other">.</span><span class="identifier">Append</span><span class="other">(</span><span class="string">&quot;: &quot;</span><span class="other">)</span><span class="other">.</span><span class="identifier">Append</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span><span class="other">;</span>
+            <span class="keyword">if</span> <span class="other">(</span><span class="identifier">stackTrace</span> <span class="other">!</span><span class="other">=</span> <span class="string">&quot;&quot;</span><span class="other">)</span>
+            <span class="other">{</span>
+                <span class="identifier">s.Append</span><span class="other">(</span><span class="string">&quot;:\n&quot;</span><span class="other">)</span><span class="other">.</span><span class="identifier">Append</span><span class="other">(</span><span class="identifier">stackTrace</span><span class="other">)</span><span class="other">;</span>
+            <span class="other">}</span>
+            <span class="keyword">return</span> <span class="identifier">s.ToString</span><span class="other">(</span><span class="other">)</span><span class="other">;</span>
+        <span class="other">}</span>
+        <span class="keyword">private</span> <span class="keyword">string</span> <span class="identifier">message</span><span class="other">;</span>
+        <span class="keyword">private</span> <span class="keyword">string</span> <span class="identifier">stackTrace</span><span class="other">;</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">SystemException</span> <span class="other">:</span> <span class="identifier">Exception</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">SystemException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">NullReferenceException</span> <span class="other">:</span> <span class="identifier">SystemException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">NullReferenceException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">IndexOutOfRangeException</span> <span class="other">:</span> <span class="identifier">SystemException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">IndexOutOfRangeException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">ArgumentException</span> <span class="other">:</span> <span class="identifier">SystemException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">ArgumentException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">ArgumentOutOfRangeException</span> <span class="other">:</span> <span class="identifier">ArgumentException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">ArgumentOutOfRangeException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">ArgumentNullException</span> <span class="other">:</span> <span class="identifier">ArgumentException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">ArgumentNullException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">InvalidCastException</span> <span class="other">:</span> <span class="identifier">SystemException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">InvalidCastException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">FileSystemException</span> <span class="other">:</span> <span class="identifier">SystemException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">FileSystemException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">LogicException</span> <span class="other">:</span> <span class="identifier">Exception</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">LogicException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">StackOverflowException</span> <span class="other">:</span> <span class="identifier">SystemException</span>
+    <span class="other">{</span>
+        <span class="keyword">public</span> <span class="identifier">StackOverflowException</span><span class="other">(</span><span class="keyword">string</span> <span class="identifier">message</span><span class="other">)</span> <span class="other">:</span> <span class="keyword">base</span><span class="other">(</span><span class="identifier">message</span><span class="other">)</span>
+        <span class="other">{</span>
+        <span class="other">}</span>
+    <span class="other">}</span>
+
+    <span class="other">[</span><span class="identifier">vmf</span><span class="other">=</span><span class="identifier">rethrow</span><span class="other">]</span>
+    <span class="keyword">public</span> <span class="identifier">extern</span> <span class="keyword">void</span> <span class="identifier">Rethrow</span><span class="other">(</span><span class="identifier">Exception</span> <span class="identifier">exception</span><span class="other">)</span><span class="other">;</span>
+<span class="other">}</span>
+</pre>
+</body>
+</html>

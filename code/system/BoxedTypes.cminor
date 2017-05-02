@@ -1,0 +1,473 @@
+//  ============================================================
+//  Boxed types complete compiler support for boxing operations.
+//  Instance of a basic value type is converted to an object of 
+//  the corresponding boxed type, so that member functions of 
+//  the boxed type can be called for the value. For example, the
+//  following statements:
+//  
+//  sbyte x = 123;
+//  string s = x.ToString();
+//
+//  are converted by the compiler to the following:
+//
+//  sbyte x = 123;
+//  BoxedInt8 @x = new BoxedInt8(x);
+//  string s = @x.ToString();
+//
+//  Boxed types also contain static member functions, that 
+//  enable expressions of the form type.staticMemFun(instance)
+//  For example, the following statement:
+//
+//  bool isLetter = char.IsLetter('a');
+//
+//  is converted by the compiler to the following:
+//  
+//  bool isLetter = BoxedChar.IsLetter('a');
+//  ===========================================================
+
+namespace System
+{
+    public class BoxedInt8
+    {
+        public BoxedInt8(sbyte value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static sbyte Parse(string s)
+        {
+            return System.ParseSByte(s);
+        }
+        public static bool TryParse(string s, ref sbyte value)
+        {
+            return System.TryParseSByte(s, ref value);
+        }
+        public sbyte value;
+    }
+
+    public class BoxedUInt8
+    {
+        public BoxedUInt8(byte value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public static string ToHexString(byte value)
+        {
+            return System.ToHexString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return value;
+        }
+        public static byte Parse(string s)
+        {
+            return System.ParseByte(s);
+        }
+        public static bool TryParse(string s, ref byte value)
+        {
+            return System.TryParseByte(s, ref value);
+        }
+        public static byte ParseHex(string s)
+        {
+            return System.ParseHexByte(s);
+        }
+        public static bool TryParseHex(string s, ref byte value)
+        {
+            return System.TryParseHexByte(s, ref value);
+        }
+        public byte value;
+    }
+
+    public class BoxedInt16
+    {
+        public BoxedInt16(short value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static short Parse(string s)
+        {
+            return System.ParseShort(s);
+        }
+        public static bool TryParse(string s, ref short value)
+        {
+            return System.TryParseShort(s, ref value);
+        }
+        public short value;
+    }
+
+    public class BoxedUInt16
+    {
+        public BoxedUInt16(ushort value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public static string ToHexString(ushort value)
+        {
+            return System.ToHexString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return value;
+        }
+        public static ushort Parse(string s)
+        {
+            return System.ParseUShort(s);
+        }
+        public static bool TryParse(string s, ref ushort value)
+        {
+            return System.TryParseUShort(s, ref value);
+        }
+        public static ushort ParseHex(string s)
+        {
+            return System.ParseHexWord(s);
+        }
+        public static bool TryParseHex(string s, ref ushort value)
+        {
+            return System.TryParseHexWord(s, ref value);
+        }
+        public ushort value;
+    }
+
+    public class BoxedInt32
+    {
+        public BoxedInt32(int value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static int Parse(string s)
+        {
+            return System.ParseInt(s);
+        }
+        public static bool TryParse(string s, ref int value)
+        {
+            return System.TryParseInt(s, ref value);
+        }
+        public int value;
+    }
+
+    public class BoxedUInt32
+    {
+        public BoxedUInt32(uint value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public static string ToHexString(uint value)
+        {
+            return System.ToHexString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return value;
+        }
+        public static uint Parse(string s)
+        {
+            return System.ParseUInt(s);
+        }
+        public static bool TryParse(string s, ref uint value)
+        {
+            return System.TryParseUInt(s, ref value);
+        }
+        public static uint ParseHex(string s)
+        {
+            return System.ParseHexDWord(s);
+        }
+        public static bool TryParseHex(string s, ref uint value)
+        {
+            return System.TryParseHexDWord(s, ref value);
+        }
+        public uint value;
+    }
+
+    public class BoxedInt64
+    {
+        public BoxedInt64(long value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static long Parse(string s)
+        {
+            return System.ParseLong(s);
+        }
+        public static bool TryParse(string s, ref long value)
+        {
+            return System.TryParseLong(s, ref value);
+        }
+        public long value;
+    }
+
+    public class BoxedUInt64
+    {
+        public BoxedUInt64(ulong value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public static string ToHexString(ulong value)
+        {
+            return System.ToHexString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return value;
+        }
+        public static ulong Parse(string s)
+        {
+            return System.ParseULong(s);
+        }
+        public static bool TryParse(string s, ref ulong value)
+        {
+            return System.TryParseULong(s, ref value);
+        }
+        public static ulong ParseHex(string s)
+        {
+            return System.ParseHexQWord(s);
+        }
+        public static bool TryParseHex(string s, ref ulong value)
+        {
+            return System.TryParseHexQWord(s, ref value);
+        }
+        public ulong value;
+    }
+
+    public class BoxedFloat
+    {
+        public BoxedFloat(float value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static float Parse(string s)
+        {
+            return System.ParseFloat(s);
+        }
+        public static bool TryParse(string s, ref float value)
+        {
+            return System.TryParseFloat(s, ref value);
+        }
+        public float value;
+    }
+
+    public class BoxedDouble
+    {
+        public BoxedDouble(double value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static double Parse(string s)
+        {
+            return System.ParseDouble(s);
+        }
+        public static bool TryParse(string s, ref double value)
+        {
+            return System.TryParseDouble(s, ref value);
+        }
+        public double value;
+    }
+
+    public class BoxedChar
+    {
+        public BoxedChar(char value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static bool IsSpace(char c)
+        {
+            return System.IsCSpace(c);
+        }
+        public static bool IsSeparator(char c)
+        {
+            return System.Unicode.IsSeparator(c);
+        }
+        public static bool IsLetter(char c)
+        {
+            return System.Unicode.IsLetter(c);
+        }
+        public static bool IsLower(char c)
+        {
+            return System.Unicode.IsLower(c);
+        }
+        public static bool IsUpper(char c)
+        {
+            return System.Unicode.IsUpper(c);
+        }
+        public static bool IsNumber(char c)
+        {
+            return System.Unicode.IsNumber(c);
+        }
+        public static bool IsPunctuation(char c)
+        {
+            return System.Unicode.IsPunctuation(c);
+        }
+        public static char ToLower(char c)
+        {
+            return System.Unicode.ToLower(c);
+        }
+        public static char ToUpper(char c)
+        {
+            return System.Unicode.ToUpper(c);
+        }
+        public static Unicode.Category GetUnicodeCategory(char c)
+        {
+            return System.Unicode.GetCategory(c);
+        }
+        public static string UnicodeName(char c)
+        {
+            return System.Unicode.GetCharacterName(c);
+        }
+        public static bool IsCSpace(char c)
+        {
+            return System.IsCSpace(c);
+        }
+        public static bool IsCLower(char c)
+        {
+            return System.IsCLower(c);
+        }
+        public static bool IsCUpper(char c)
+        {
+            return System.IsCUpper(c);
+        }
+        public static bool IsCAlpha(char c)
+        {
+            return System.IsCAlpha(c);
+        }
+        public static bool IsCAlnum(char c)
+        {
+            return System.IsCAlnum(c);
+        }
+        public static bool IsCDigit(char c)
+        {
+            return System.IsCDigit(c);
+        }
+        public static bool IsCHexDigit(char c)
+        {
+            return System.IsCHexDigit(c);
+        }
+        public static bool IsCPunctuation(char c)
+        {
+            return System.IsCPunctuation(c);
+        }
+        public static bool IsCPrintable(char c)
+        {
+            return System.IsCPrintable(c);
+        }
+        public static char ToCLower(char c)
+        {
+            return System.ToCLower(c);
+        }
+        public static char ToCUpper(char c)
+        {
+            return System.ToCUpper(c);
+        }
+        public static char NL
+        {
+            get { return '\n'; }
+        }
+        public static char CR
+        {
+            get { return '\r'; }
+        }
+        public static char Parse(string s)
+        {
+            return System.ParseChar(s);
+        }
+        public static bool TryParse(string s, ref char value)
+        {
+            return System.TryParseChar(s, ref value);
+        }
+        public char value;
+    }
+
+    public class BoxedBoolean
+    {
+        public BoxedBoolean(bool value)
+        {
+            this.value = value;
+        }
+        public override string ToString()
+        {
+            return System.ToString(value);
+        }
+        public override ulong GetHashCode()
+        {
+            return cast<ulong>(value);
+        }
+        public static bool Parse(string s)
+        {
+            return System.ParseBool(s);
+        }
+        public static bool TryParse(string s, ref bool value)
+        {
+            return System.TryParseBool(s, ref value);
+        }
+        public bool value;
+    }
+}

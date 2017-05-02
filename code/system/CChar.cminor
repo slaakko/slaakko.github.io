@@ -1,0 +1,32 @@
+//  ===========================================
+//  Here are character classification functions 
+//  that are compatible with the C library
+//  implementations and operate with the ASCII 
+//  codes of characters.
+//  ===========================================
+
+namespace System
+{
+    [vmf=iscspace]
+    public extern bool IsCSpace(char c);
+    [vmf=iscalpha]
+    public extern bool IsCAlpha(char c);
+    [vmf=iscalnum]
+    public extern bool IsCAlnum(char c);
+    [vmf=iscdigit]
+    public extern bool IsCDigit(char c);
+    [vmf=iscxdigit]
+    public extern bool IsCHexDigit(char c);
+    [vmf=iscpunct]
+    public extern bool IsCPunctuation(char c);
+    [vmf=iscprint]
+    public extern bool IsCPrintable(char c);
+    [vmf=isclower]
+    public extern bool IsCLower(char c);
+    [vmf=iscupper]
+    public extern bool IsCUpper(char c);
+    [vmf=toclower]
+    public extern char ToCLower(char c);
+    [vmf=tocupper]
+    public extern char ToCUpper(char c);
+}

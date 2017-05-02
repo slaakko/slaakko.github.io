@@ -1,0 +1,46 @@
+ASSEMBLY HEADER
+
+assembly name: hello
+assembly format: 1
+assembly flags: native
+original file path: C:/Users/Seppo/cminor/doc/code/hello/assembly/debug/hello.cminora
+file path read from: C:/Users/Seppo/cminor/doc/code/hello/assembly/debug/hello.cminora
+native target triple: x86_64-pc-windows-msvc
+native shared library file name: hello.dll
+native import library file name: hello.lib
+assembly dependencies:
+    hello
+        System
+            System.Base
+                System.Core
+                    none
+            System.Core
+                none
+            System.Text.Parsing
+                System.Base
+                    System.Core
+                        none
+                System.Text.Parsing.CodeDom
+                    System.Base
+                        System.Core
+                            none
+            System.Text.Parsing.CodeDom
+                System.Base
+                    System.Core
+                        none
+        System.Base
+            System.Core
+                none
+        System.Text.Parsing
+            System.Base
+                System.Core
+                    none
+            System.Text.Parsing.CodeDom
+                System.Base
+                    System.Core
+                        none
+referenced assemblies: 
+    System
+        original file path: C:/Users/Seppo/cminor/system/System/assembly/debug/System.cminora
+        file path read from: C:/Users/Seppo/cminor/system/assembly/debug/System.cminora
+

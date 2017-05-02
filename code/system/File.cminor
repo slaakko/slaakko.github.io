@@ -1,0 +1,55 @@
+//  ==========================================================
+//  File is a static class that contains convenience functions
+//  for creating and opening text and binary streams.
+//  ==========================================================
+
+using System;
+
+namespace System.IO
+{
+    public static class File
+    {
+        public static StreamWriter CreateText(string filePath)
+        {
+            if (System.GetPlatform() == System.Platform.windows)
+            {
+                return new StreamWriter(new WideningStream(new BufferedStream(new FileStream(filePath, FileMode.create, FileAccess.write))));
+            }
+            else
+            {
+                return new StreamWriter(new BufferedStream(new FileStream(filePath, FileMode.create, FileAccess.write)));
+            }
+        }
+        public static BinaryWriter CreateBinary(string filePath)
+        {
+            return new BinaryWriter(new BufferedStream(new FileStream(filePath, FileMode.create, FileAccess.write)));
+        }
+        public static StreamReader OpenRead(string filePath)
+        {
+            if (System.GetPlatform() == System.Platform.windows)
+            {
+                return new StreamReader(new NarrowingStream(new BufferedStream(new FileStream(filePath, FileMode.open, FileAccess.read))));
+            }
+            else
+            {
+                return new StreamReader(new BufferedStream(new FileStream(filePath, FileMode.open, FileAccess.read)));
+            }
+        }
+        public static BinaryReader OpenBinary(string filePath)
+        {
+            return new BinaryReader(new BufferedStream(new FileStream(filePath, FileMode.open, FileAccess.read)));
+        }
+        public static string ReadAllText(string filePath)
+        {
+            using (StreamReader reader = OpenRead(filePath))
+            {
+                return reader.ReadToEnd();
+            }
+            return string.Empty;
+        }
+        [vmf=fexists]
+        extern public static bool Exists(string filePath);
+        [vmf=writetimeless]
+        extern public static bool LastWriteTimeLess(string filePath1, string filePath2);
+    }
+}

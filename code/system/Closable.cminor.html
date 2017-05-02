@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Closable.cminor</title>
+    <link rel="stylesheet" type="text/css" href="../../style/code.css"/>
+</head>
+<body>
+<pre>
+<span class="comment">//  =======================================================</span>
+<span class="comment">//  The compiler implements support for the using statement</span>
+<span class="comment">//  with the help of the closable interface. Classes that</span>
+<span class="comment">//  need to be closed after operating with them, such as</span>
+<span class="comment">//  streams, should implement this interface.</span>
+<span class="comment">//  =======================================================</span>
+
+<span class="keyword">namespace</span> <span class="identifier">System</span>
+<span class="other">{</span>
+    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">Closable</span>
+    <span class="other">{</span>
+        <span class="keyword">void</span> <span class="identifier">Close</span><span class="other">(</span><span class="other">)</span><span class="other">;</span>
+    <span class="other">}</span>
+<span class="other">}</span>
+</pre>
+</body>
+</html>

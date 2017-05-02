@@ -1,0 +1,24 @@
+FUNCTION TABLE
+
+FUNCTION #0
+call name: main()
+group name: main
+full name: internal export System.Void main()
+mangled name: main_entry_point
+flags: exported canThrow
+source file path: C:/Users/Seppo/cminor/doc/code/hello/hello.cminor
+0 parameters:
+0 locals:
+returns: System.Void
+code:
+{
+    0    BC    receive
+    1    F2    gcpoll
+    2    C3    enterblock
+    3    BA    loadconstant.s 643
+    4    E3    slit2s
+    5    C0    call System.Console.WriteLine(System.String)
+    6    C4    exitblock
+}
+
+
