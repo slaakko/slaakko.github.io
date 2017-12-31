@@ -9,9 +9,9 @@ body.index
     background-repeat: no-repeat;
 }
 
-h1.index
+h1.index, h2.index 
 {
-    color: black
+    color: darkblue;
 }
 
 p
