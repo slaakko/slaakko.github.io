@@ -1,0 +1,1825 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>System.Json Namespace</title>
+  <link href="../../../style/style.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <h1>System.Json Namespace</h1>
+  <h2>Concepts</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">concept</span></td>
+    <td>
+     <a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible&lt;T></a>
+    </td>
+    <td xml:space="preserve">A class having a constructor that takes a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> pointer is <strong> JsonConstructible</strong> .</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">concept</span></td>
+    <td>
+     <a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable&lt;T></a>
+    </td>
+    <td xml:space="preserve">A class having a member function named <strong> ToJson</strong> that returns a <a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a> to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> is <strong> JsonExportable</strong> .</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">concept</span></td>
+    <td>
+     <a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType&lt;T></a>
+    </td>
+    <td xml:space="preserve">Primitive types <strong> int</strong> , <strong> long</strong> , etc. are <strong> JsonValueType</strong> s, as are <a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a> , <a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a> and <a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a> .</td>
+   </tr>
+  </table>
+  <h2>Classes</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonArray_595A35C98AB243A92CA1C39BB1B07E82AA246D18.html">JsonArray</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonBool_DECA0A9F59CE58DA61371982ADCFCD31F1497F79.html">JsonBool</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonClassFactory_07F3FE1559307E1B17EEBEAFBAA8C9DBAA71924E.html">JsonClassFactory</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonGrammar_35AA9FF722AADCE4D0495A1DD9EF9B19479BF318.html">JsonGrammar</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonImportException_B2C659772CC55BEE3DF2ECEA8C50121E3DA06723.html">JsonImportException</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonNull_E0746AE6880508740D5FFC8AF4E0FB0A7AE20ED2.html">JsonNull</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonNumber_BA94887A1742701B420D069040E7953026161429.html">JsonNumber</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonObject_1ACA524ABF05C4E15B709275F66F3BF5C165B69D.html">JsonObject</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonParser_821F84FEBAE4D09942A9E5D6B178B8C8CB1D24E9.html">JsonParser</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonString_5806452F49D8C71DEDC42FCEB48EC3A2163F7516.html">JsonString</a>
+    </td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<span class="kw">class</span></td>
+    <td>
+     <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>
+    </td>
+   </tr>
+  </table>
+  <h2>Functions</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_9CEA6C1C5DCE40E3C08ED971B107560C25A2BD58">FromJson&lt;K, T, H, C></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#add440df-b184-43b0-bd08-89b8479da29f">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#396a23a5-50e9-4260-96d7-e74e0509df59">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#6d2aeb25-b1b2-41c5-aa9e-16b68ed417e2">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#f5bffbee-e013-48ac-b20c-35d3e1962b1a">C</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#add440df-b184-43b0-bd08-89b8479da29f">K</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#396a23a5-50e9-4260-96d7-e74e0509df59">T</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_F0AB8F8B2A3CAB4709E73C0B40ADEC76D5381496">FromJson&lt;K, T, H, C></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#94f06644-c8c1-410e-ac7a-e4ff9ccae945">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#3289ecac-933f-4a21-b75e-d4c8bcf9e436">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#92f6af94-067d-4d6e-954a-739f7a36927a">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#c674149e-f987-41f5-bf57-2f260f746f2e">C</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#94f06644-c8c1-410e-ac7a-e4ff9ccae945">K</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#3289ecac-933f-4a21-b75e-d4c8bcf9e436">T</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_CA66F53A4B7279D7819C28DF759545627929AC07">FromJson&lt;K, T, H, C></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#dafcdcc1-ffed-4882-a924-80892b46e5f8">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#6ec7d039-27f0-4a28-a584-519dcd5bfadc">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#55c1e35d-2337-4030-956d-c7311f458e3a">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#def6418b-a6c0-4676-818c-b8dc10ff0cec">C</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#dafcdcc1-ffed-4882-a924-80892b46e5f8">K</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#6ec7d039-27f0-4a28-a584-519dcd5bfadc">T</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_9D32015004A4C212A5B3BD7BCE8E54DDFEC2C72C">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#09ab12a2-1727-4a4e-91b8-e196a4cc1e76">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_1220656BC9EA62B69E42434C079779589A12546B">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0266fc31-78e7-42c6-8531-70102fe9eb0c">T</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#0266fc31-78e7-42c6-8531-70102fe9eb0c">T</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_9ED7B774E057E767955AA4BFB6975EA22778FFBA">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#fdfadca0-04c7-4136-88ac-40dfe7953601">T</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#fdfadca0-04c7-4136-88ac-40dfe7953601">T</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_97934AE31E49745BFBF115471B92C26C18CEB6B3">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#87fab367-48b4-46cc-ae6d-4ac370f25bf3">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_86B24EEC8A29EEDEEB1BDA72F46E16FF97EDB455">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0180003d-7025-4b02-a58d-c57c72dcc80c">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#6fd3ecf8-67d0-4d89-a24e-322589e4b3b7">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#9eb8130b-9c61-4d39-8cfa-320205a2cfe6">KeyCompare</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#0180003d-7025-4b02-a58d-c57c72dcc80c">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#6fd3ecf8-67d0-4d89-a24e-322589e4b3b7">Value</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_325A8C52C7395B16BC61FCDE988845CF3900DD30">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#e26021b1-ab71-44f0-9f52-8ceaae709dc8">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#0ec72582-3ab1-4185-88a8-920cc0f83129">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#09339256-f349-455a-b1eb-0fd20ffc73c3">KeyCompare</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#e26021b1-ab71-44f0-9f52-8ceaae709dc8">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#0ec72582-3ab1-4185-88a8-920cc0f83129">Value</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_5549A8B6E26ED0527CDEAD71A05C23A4AAE3F70F">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#8ea22044-f42c-4eb4-be60-668ef2f939f2">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#b6617d2f-4dc9-4e03-abb8-42ab943529c2">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#fda3b8f3-6e17-4bf3-a7f7-2f9f186f5f1f">KeyCompare</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#8ea22044-f42c-4eb4-be60-668ef2f939f2">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#b6617d2f-4dc9-4e03-abb8-42ab943529c2">Value</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_293CA650CEA60428E41363EF452297EA636E2B53">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#5d358f7f-6cb8-48bf-ba4b-7311de4fd531">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#6e8d5101-953e-4c8b-a10b-23bf2501c8c4">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#3298c165-3167-4d99-a6ac-912a61991a23">KeyCompare</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#5d358f7f-6cb8-48bf-ba4b-7311de4fd531">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#6e8d5101-953e-4c8b-a10b-23bf2501c8c4">Value</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_1824593656021EB8DC78E7379E9787F7EA4BC08C">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0cec1a44-8207-4da4-b4be-9a2decf02eec">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#3e12cb4a-c5b0-4f49-a2f1-d5c61503b304">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#4239cceb-5618-4d1f-93d9-2fced3c383b7">KeyCompare</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#0cec1a44-8207-4da4-b4be-9a2decf02eec">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#3e12cb4a-c5b0-4f49-a2f1-d5c61503b304">Value</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_F0428D168859D23AC8741373B4D4CE9BD7E604BF">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#19888120-77fa-4408-a5f9-24acd5d52b2e">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#e4854b40-fa0b-47a9-8bd2-7eabf805fcf4">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#db8f3570-9b61-4355-bd4c-a09ff2507818">KeyCompare</a>>&amp;&nbsp;field)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#19888120-77fa-4408-a5f9-24acd5d52b2e">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>&nbsp;<span class="kw">and</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#e4854b40-fa0b-47a9-8bd2-7eabf805fcf4">Value</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_B5BA065DFD8F981C687FCC85E634D2BEC7B5F534">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#6e517293-3498-4755-8d44-779df35a23cb">T</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_B24EF3B2CA6DACDDA40455C0BAC1F81D35CBB64B">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_D379803A898D08C1B1B70B198CDCF31596A8FAEF">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_135453EE5B5381C490F9AA5A9DB42B54B8B0D473">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_E078F94C43EA1E961A54E8B518B61B936C577B8C">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Json/doc/ns_System.Json.html#80f0b997-ef0b-4337-b22b-33e24ade7751">T</a>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_97B0CE17747A8F5A6697880760B61937E269F734">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#f7954785-ec52-4278-831d-4b47bdd3568d">T</a>>&amp;&nbsp;field)</td>
+    <td xml:space="preserve">Creates a <a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a> class from a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> and assigns it to the <strong> field</strong> argument.</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_1A5EF2BB505A65AE272D6778E5C726D7152C8209">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <span class="kw">bool</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_FFAD692C1C6A68793C98499789D9D0995D7D5432">FromJson&lt;K, T, H, C></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#4a0a0356-2fb1-4b4e-9d4c-2724fe3d881f">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#26e69a17-2024-4920-b4e1-dbca10860315">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#ef4ee2cc-219c-4fbe-957f-da72a7b3b8eb">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#71e4762c-d477-411f-a926-8913a9be46cf">C</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_1C47B33E24485758942AD2A756143394BF7E2376">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#4be9a00b-5719-45df-a0f1-07621dfb1a40">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_72C2B78EE74B873441A263F7D964176DF45A1536">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#4fbb004c-0d34-4b11-be2f-d047c0d265ad">T</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_C2A1D16CB1CC4D128735796A17A1411322E6B1B0">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#08f911f5-63b2-40ff-940d-b15d85e112ec">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_835C4BD46FFB629533B1344AF81392E241235C5A">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#e3b93ca7-6eb1-49aa-bf76-7223db2eb853">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#c8e4c9f7-4540-4cf6-be07-bba212f93059">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#c7520f57-d299-4b92-82fb-159a97d80405">KeyCompare</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_0D468A43DEB7747049443EB4EF884A4135625F54">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_FD4DA9B1398050558E5BF922A072C03C129097FB">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_8D111EF5D30668FB333D278DE18BB7084EC1BEC1">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_E85B239D4801966BC0C36D7D0EABDB6B3B4153A6">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Json/doc/ns_System.Json.html#ab57804b-c375-41b2-a70a-7b4dbac45717">T</a>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_5452FE9912EEC2CAD2FCDDA224EC9780340F70E3">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <span class="kw">bool</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_E0103885FB5C2EAA85A69FB9E3B88B0F08505C38">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <span class="kw">double</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_54062682CD69EE8046DDAA7F0FC20A9EE527901D">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <span class="kw">int</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_E3F84A3CD39C44F180D8531D0B9613C98EED3828">FromJson&lt;K, T, H, C></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#8f4a7fe5-9c98-45c9-9956-88f88e17bf9d">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#867aaa9f-fe48-40ac-9bf6-6badb8718eea">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#224d888a-3c87-4926-8d1c-8c5c51748250">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#72e32a00-2083-4751-a029-c24a6abdcfb2">C</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_7D2B463B2026736BCFE7A8B10E71C7F38CF7EAD6">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0d087a69-f0b0-4eed-83ef-0bbda2bf0740">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_7A814D4F5941FE9E25A4AE5425820D5FD4FF9BE3">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#c3f4684a-6221-4827-89e8-d9aa258d5b3d">T</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_CCEDB82BD07C2C9DAD559F008F26E0D15C3AEFFC">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#1e45e5d8-b803-47de-9ddc-95c84a025a0d">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_6F1E1E91A9CE9B3F27A7E95F2032FBD9785CC5CD">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#954b25c5-2fae-4961-8535-7d22b74478fc">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#65f1b757-b464-41e3-b551-4f72507f55bd">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#27fb2db8-0cab-4c53-8aaf-1d72ae879577">KeyCompare</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_81D5153F2F4A29AEE9BCF03163C9DA49BD818293">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#49a2f8dc-757a-440d-93ae-4a42c9aaf563">T</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_0FDE02F2AC8E3A1E0E469FC27DE91FAB6714F244">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_F738AFA288AFAB4C745BD61D99B2EEEA6337335D">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_37C1ACCEBB7EDA0F42A57D178260B0143BBEBA17">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_95041BE10F45478E45EE3508DCFE9BF440E370C6">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Json/doc/ns_System.Json.html#02a9fc8b-864a-4cc6-ade9-9194faba63bb">T</a>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_70EE2D3B1295C9C06D9783A1F0BC443E999DCF09">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#30fafbb1-add4-4c8b-99dc-cd7da6e98af7">T</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_4B7564FFFFF32A4E3B2D0AD8B2601BB144CC2935">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <span class="kw">bool</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_DB824D49846A7E03111FBBB884E79002D2431F8A">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <span class="kw">double</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_9D0EF3A56DF7ED266DB174141193A894B5A409EC">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <span class="kw">int</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_1841BC18B6B4F57155CA82AD178323BC48F79296">FromJson&lt;K, T, H, C></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0aa1bd08-60b4-45bf-8229-ecaa1c41d9c2">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#30a7236b-4494-44db-9857-46800e9bee93">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#04ff2d6f-9c3f-4c8c-9a19-bdd99ae6a413">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#174ffe54-bfc9-4648-a262-12b66c290f4c">C</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_27B8E570D19B486712739B7548955BF638284E2D">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#816405b4-47d1-447b-aa16-e6ed771c8be1">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_FF155A7B997D3D253B9080C12E91442E4B3EADD2">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#067631c0-32a2-42f0-a82a-056746e6ddaa">T</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_B6396B4F64B6622EC01B682A9FA07739C2EBCE4E">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#6f6d65c6-54e7-47fa-981b-68d94ae819a2">T</a>>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_141AD8D028A1463F11D57A1CC7D3DDBCA7EC1A26">FromJson&lt;Key, Value, KeyCompare></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#e855d661-c661-4205-a554-e00f81a28e49">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#350d39b1-722f-4565-8fb7-edd6c751d0b3">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#8366dd86-122d-4566-bbce-e44299b6a3fc">KeyCompare</a>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_28A1E6951F82E0549D2DF5680C519D9FC076C9CB">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_B966CCBA3C2871F5525034998A78EA8217194B24">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_8EAA46E11086492741B83B71530310637D8DE4AB">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_06EC9ABFB5085084F92AC14030C24A856303CCC9">FromJson&lt;T></a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Json/doc/ns_System.Json.html#5504b653-cbd4-4b54-a063-c3516715ec12">T</a>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_E5E9BCD1395BC8C39A06FB102FF0B9E8DDF22E56">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <span class="kw">bool</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_62C4C32E61B89D3AB75712DBABEA0BFC3F5B1976">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <span class="kw">double</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_4B63168BDE07291BB93873BB968CC902EA2EA499">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <span class="kw">int</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_EE92D51E43D5311A8A834EC6CAFD7552BC74BC2C">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <span class="kw">double</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_FromJson_312EBF86915CFC46CC7A612B242406BD677FAF3C">FromJson</a>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <span class="kw">int</span>&amp;&nbsp;field)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ParseJson_DBF1730C39BEE47518DDF489C3C1CA7CC4D29DFF">ParseJson</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;jsonText)</td>
+    <td xml:space="preserve">Converts a <a href="https://www.json.org/"> JSON</a> string to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> .</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ParseJson_AA1EB3D4CCCAA45FDB88817F137BB8925D3738A7">ParseJson</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;jsonText)</td>
+    <td xml:space="preserve">Converts a <a href="https://www.json.org/"> JSON</a> string to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> .</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ParseJson_2F088677CC9179ED41188E987956FF77EB3BEDB4">ParseJson</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;jsonText)</td>
+    <td xml:space="preserve">Converts a <a href="https://www.json.org/"> JSON</a> string to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> .</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_RegisterJsonClass_2FBE4E8832266A3352BF1717BFB867612A99D471">RegisterJsonClass</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;jsonClassName, <a href="../../System.Json/doc/ns_System.Json.html#delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">JsonClassCreatorDelegate</a>&nbsp;creator)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_RegisterJsonClass_A3D18EABE8AD1F9D0C4A42DF133AD4E9CC2F8B98">RegisterJsonClass</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;jsonClassName, <a href="../../System.Json/doc/ns_System.Json.html#delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">JsonClassCreatorDelegate</a>&nbsp;creator)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_RegisterJsonClass_F2E6271DBF6A1478AD929ED54A519E0D2BCBD5AE">RegisterJsonClass</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;jsonClassName, <a href="../../System.Json/doc/ns_System.Json.html#delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">JsonClassCreatorDelegate</a>&nbsp;creator)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_574858316A43DEC277D82C9372FC90DD066D0EAC">ToJson</a>(<span class="kw">bool</span>&nbsp;value)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_D41D6D0DCA6C2F2E779486F47F8BFD91D47426EA">ToJson&lt;K, T, H, C></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#3c3c1e3d-de6a-464e-adfa-0779f7e0f3cc">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#86d508e2-5e9a-4646-866e-a01b17f86436">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#982a821a-5363-4015-890e-13a5b21b3a09">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#90b3c777-5447-4376-89d2-819f2f8a0297">C</a>>&amp;&nbsp;value)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#3c3c1e3d-de6a-464e-adfa-0779f7e0f3cc">K</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_91FBDD8DFFF0BEB6D6C29EC753DF3D9249916F3C">ToJson&lt;K, T, H, C></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#33f8ca72-4fc9-447a-af26-08e8d536df68">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#707b8459-1635-4b09-ba98-be6034d8f44a">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#040bff1f-ef86-41c9-a64b-359e7a29116f">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#423caa56-e96c-4f08-b863-846fe74dae9e">C</a>>&amp;&nbsp;value)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#33f8ca72-4fc9-447a-af26-08e8d536df68">K</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>&nbsp;<span class="kw">or</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#33f8ca72-4fc9-447a-af26-08e8d536df68">K</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_8FF6AD1D7D1AF315BBE189E97243F7B20A759CCE">ToJson&lt;T></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#9dfc0305-4c3f-4de9-8a9d-2d6ef40f6bbc">T</a>>&amp;&nbsp;value)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_660ADE07D30699D123CC5F0BECA3E252DF64B33D">ToJson&lt;Key, Value, KeyCompare></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#d66fdb8f-b22a-47fd-a66c-a78a8d49cfe6">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#b0eb6665-a0a0-476c-a777-3ebfa1758317">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#3c91c59e-f8a0-4291-90ae-8a5bd73d0ace">KeyCompare</a>>&amp;&nbsp;value)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#d66fdb8f-b22a-47fd-a66c-a78a8d49cfe6">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_F05F6792D09977AF3EDA3344A6CAA5403D58AFD1">ToJson&lt;Key, Value, KeyCompare></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#75a9bae7-24a4-4c69-9533-25fb86f53877">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#cc47c9c9-818b-455b-98af-aa1bd1ff7182">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#23ac4b30-f9b8-45ea-98b6-ae4e6a6bfdac">KeyCompare</a>>&amp;&nbsp;value)&nbsp;<span class="kw">where</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#75a9bae7-24a4-4c69-9533-25fb86f53877">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>&nbsp;<span class="kw">or</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#75a9bae7-24a4-4c69-9533-25fb86f53877">Key</a>&nbsp;<span class="kw">is</span>&nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_644044BAF600DEEDF2C36244ACC2EA1E2C07DAD6">ToJson&lt;T></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#45d00b38-f23b-41ac-82e2-8ee0fccba68f">T</a>>&amp;&nbsp;ptr)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_B74042AE374BEB28C90779B6CA4C98DA72081002">ToJson</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;value)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_7F3B903221E5DAB4017615FC50EE5FBC968600F8">ToJson</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;value)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_53C005E9773AC76D691F59144E23E4AE81E6EB16">ToJson</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;value)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_D4341533DFEB06925268DB024A00F44A7044154D">ToJson&lt;T></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#74f6a496-52aa-42f3-b1b7-c5309ce32eb0">T</a>&amp;&nbsp;object)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_14356EE699F7663903DB09AB9EFE1B206802DDE8">ToJson&lt;T></a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#5196e532-3b9c-4153-b67e-d05b7d1f6e1a">T</a>>&amp;&nbsp;ptr)</td>
+    <td xml:space="preserve">Converts a <a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable</a> class to a unique pointer of <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> and returns it.</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>></td>
+    <td xml:space="preserve"><a href="../../System.Json/doc/ns_System.Json.html#function_ToJson_67DBD75B6175FD816B5C6F7218DFE8FED2B4B7F7">ToJson</a>(<span class="kw">double</span>&nbsp;value)</td>
+   </tr>
+  </table>
+  <h2>Delegates</h2>
+  <table>
+   <tr id="delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">delegate</span>&nbsp;<span class="kw">void</span>*</td>
+    <td>
+     JsonClassCreatorDelegate(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>
+     *&nbsp;value)</td>
+   </tr>
+  </table>
+  <h2>Function Details</h2>
+  <h3 id="function_FromJson_9CEA6C1C5DCE40E3C08ED971B107560C25A2BD58" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;K, T, H, C>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#add440df-b184-43b0-bd08-89b8479da29f">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#396a23a5-50e9-4260-96d7-e74e0509df59">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#6d2aeb25-b1b2-41c5-aa9e-16b68ed417e2">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#f5bffbee-e013-48ac-b20c-35d3e1962b1a">C</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="add440df-b184-43b0-bd08-89b8479da29f">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="396a23a5-50e9-4260-96d7-e74e0509df59">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="6d2aeb25-b1b2-41c5-aa9e-16b68ed417e2">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="f5bffbee-e013-48ac-b20c-35d3e1962b1a">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#add440df-b184-43b0-bd08-89b8479da29f">K</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#396a23a5-50e9-4260-96d7-e74e0509df59">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#355">355</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_F0AB8F8B2A3CAB4709E73C0B40ADEC76D5381496" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;K, T, H, C>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#94f06644-c8c1-410e-ac7a-e4ff9ccae945">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#3289ecac-933f-4a21-b75e-d4c8bcf9e436">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#92f6af94-067d-4d6e-954a-739f7a36927a">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#c674149e-f987-41f5-bf57-2f260f746f2e">C</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="94f06644-c8c1-410e-ac7a-e4ff9ccae945">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="3289ecac-933f-4a21-b75e-d4c8bcf9e436">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="92f6af94-067d-4d6e-954a-739f7a36927a">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="c674149e-f987-41f5-bf57-2f260f746f2e">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#94f06644-c8c1-410e-ac7a-e4ff9ccae945">K</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#3289ecac-933f-4a21-b75e-d4c8bcf9e436">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#313">313</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_CA66F53A4B7279D7819C28DF759545627929AC07" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;K, T, H, C>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#dafcdcc1-ffed-4882-a924-80892b46e5f8">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#6ec7d039-27f0-4a28-a584-519dcd5bfadc">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#55c1e35d-2337-4030-956d-c7311f458e3a">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#def6418b-a6c0-4676-818c-b8dc10ff0cec">C</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="dafcdcc1-ffed-4882-a924-80892b46e5f8">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="6ec7d039-27f0-4a28-a584-519dcd5bfadc">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="55c1e35d-2337-4030-956d-c7311f458e3a">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="def6418b-a6c0-4676-818c-b8dc10ff0cec">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#dafcdcc1-ffed-4882-a924-80892b46e5f8">K</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#6ec7d039-27f0-4a28-a584-519dcd5bfadc">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#334">334</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_9D32015004A4C212A5B3BD7BCE8E54DDFEC2C72C" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#09ab12a2-1727-4a4e-91b8-e196a4cc1e76">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="09ab12a2-1727-4a4e-91b8-e196a4cc1e76">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#09ab12a2-1727-4a4e-91b8-e196a4cc1e76">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#169">169</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_1220656BC9EA62B69E42434C079779589A12546B" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0266fc31-78e7-42c6-8531-70102fe9eb0c">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="0266fc31-78e7-42c6-8531-70102fe9eb0c">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#0266fc31-78e7-42c6-8531-70102fe9eb0c">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#128">128</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_9ED7B774E057E767955AA4BFB6975EA22778FFBA" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#fdfadca0-04c7-4136-88ac-40dfe7953601">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="fdfadca0-04c7-4136-88ac-40dfe7953601">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#fdfadca0-04c7-4136-88ac-40dfe7953601">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#107">107</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_97934AE31E49745BFBF115471B92C26C18CEB6B3" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#87fab367-48b4-46cc-ae6d-4ac370f25bf3">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="87fab367-48b4-46cc-ae6d-4ac370f25bf3">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#87fab367-48b4-46cc-ae6d-4ac370f25bf3">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#148">148</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_86B24EEC8A29EEDEEB1BDA72F46E16FF97EDB455" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0180003d-7025-4b02-a58d-c57c72dcc80c">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#6fd3ecf8-67d0-4d89-a24e-322589e4b3b7">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#9eb8130b-9c61-4d39-8cfa-320205a2cfe6">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="0180003d-7025-4b02-a58d-c57c72dcc80c">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="6fd3ecf8-67d0-4d89-a24e-322589e4b3b7">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="9eb8130b-9c61-4d39-8cfa-320205a2cfe6">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#0180003d-7025-4b02-a58d-c57c72dcc80c">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#6fd3ecf8-67d0-4d89-a24e-322589e4b3b7">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#293">293</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_325A8C52C7395B16BC61FCDE988845CF3900DD30" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#e26021b1-ab71-44f0-9f52-8ceaae709dc8">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#0ec72582-3ab1-4185-88a8-920cc0f83129">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#09339256-f349-455a-b1eb-0fd20ffc73c3">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="e26021b1-ab71-44f0-9f52-8ceaae709dc8">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="0ec72582-3ab1-4185-88a8-920cc0f83129">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="09339256-f349-455a-b1eb-0fd20ffc73c3">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#e26021b1-ab71-44f0-9f52-8ceaae709dc8">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#0ec72582-3ab1-4185-88a8-920cc0f83129">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#232">232</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_5549A8B6E26ED0527CDEAD71A05C23A4AAE3F70F" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#8ea22044-f42c-4eb4-be60-668ef2f939f2">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#b6617d2f-4dc9-4e03-abb8-42ab943529c2">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#fda3b8f3-6e17-4bf3-a7f7-2f9f186f5f1f">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="8ea22044-f42c-4eb4-be60-668ef2f939f2">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="b6617d2f-4dc9-4e03-abb8-42ab943529c2">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="fda3b8f3-6e17-4bf3-a7f7-2f9f186f5f1f">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#8ea22044-f42c-4eb4-be60-668ef2f939f2">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#b6617d2f-4dc9-4e03-abb8-42ab943529c2">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#253">253</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_293CA650CEA60428E41363EF452297EA636E2B53" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#5d358f7f-6cb8-48bf-ba4b-7311de4fd531">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#6e8d5101-953e-4c8b-a10b-23bf2501c8c4">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#3298c165-3167-4d99-a6ac-912a61991a23">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="5d358f7f-6cb8-48bf-ba4b-7311de4fd531">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="6e8d5101-953e-4c8b-a10b-23bf2501c8c4">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="3298c165-3167-4d99-a6ac-912a61991a23">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#5d358f7f-6cb8-48bf-ba4b-7311de4fd531">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#6e8d5101-953e-4c8b-a10b-23bf2501c8c4">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#190">190</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_1824593656021EB8DC78E7379E9787F7EA4BC08C" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0cec1a44-8207-4da4-b4be-9a2decf02eec">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#3e12cb4a-c5b0-4f49-a2f1-d5c61503b304">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#4239cceb-5618-4d1f-93d9-2fced3c383b7">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="0cec1a44-8207-4da4-b4be-9a2decf02eec">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="3e12cb4a-c5b0-4f49-a2f1-d5c61503b304">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="4239cceb-5618-4d1f-93d9-2fced3c383b7">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#0cec1a44-8207-4da4-b4be-9a2decf02eec">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#3e12cb4a-c5b0-4f49-a2f1-d5c61503b304">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#273">273</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_F0428D168859D23AC8741373B4D4CE9BD7E604BF" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#19888120-77fa-4408-a5f9-24acd5d52b2e">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#e4854b40-fa0b-47a9-8bd2-7eabf805fcf4">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#db8f3570-9b61-4355-bd4c-a09ff2507818">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="19888120-77fa-4408-a5f9-24acd5d52b2e">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="e4854b40-fa0b-47a9-8bd2-7eabf805fcf4">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="db8f3570-9b61-4355-bd4c-a09ff2507818">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#19888120-77fa-4408-a5f9-24acd5d52b2e">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>
+   &nbsp;<span class="kw">and</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#e4854b40-fa0b-47a9-8bd2-7eabf805fcf4">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#211">211</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_B5BA065DFD8F981C687FCC85E634D2BEC7B5F534" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#6e517293-3498-4755-8d44-779df35a23cb">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="6e517293-3498-4755-8d44-779df35a23cb">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#6e517293-3498-4755-8d44-779df35a23cb">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#426">426</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_B24EF3B2CA6DACDDA40455C0BAC1F81D35CBB64B" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#68">68</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_D379803A898D08C1B1B70B198CDCF31596A8FAEF" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#94">94</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_135453EE5B5381C490F9AA5A9DB42B54B8B0D473" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#81">81</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_E078F94C43EA1E961A54E8B518B61B936C577B8C" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Json/doc/ns_System.Json.html#80f0b997-ef0b-4337-b22b-33e24ade7751">T</a>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="80f0b997-ef0b-4337-b22b-33e24ade7751">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#80f0b997-ef0b-4337-b22b-33e24ade7751">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#376">376</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_97B0CE17747A8F5A6697880760B61937E269F734" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#f7954785-ec52-4278-831d-4b47bdd3568d">T</a>>&amp;&nbsp;field)</h4>
+  <span xml:space="preserve"><p class="description" xml:space="preserve">Creates a <a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a> class from a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> and assigns it to the <strong> field</strong> argument.</p><span xml:space="preserve"><p class="description" xml:space="preserve">A user-defined class with a <strong> json</strong> attribute is <a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a> .</p></span></span>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="f7954785-ec52-4278-831d-4b47bdd3568d">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#f7954785-ec52-4278-831d-4b47bdd3568d">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#382">382</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_1A5EF2BB505A65AE272D6778E5C726D7152C8209" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <span class="kw">bool</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#55">55</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_FFAD692C1C6A68793C98499789D9D0995D7D5432" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;K, T, H, C>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#4a0a0356-2fb1-4b4e-9d4c-2724fe3d881f">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#26e69a17-2024-4920-b4e1-dbca10860315">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#ef4ee2cc-219c-4fbe-957f-da72a7b3b8eb">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#71e4762c-d477-411f-a926-8913a9be46cf">C</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="4a0a0356-2fb1-4b4e-9d4c-2724fe3d881f">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="26e69a17-2024-4920-b4e1-dbca10860315">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="ef4ee2cc-219c-4fbe-957f-da72a7b3b8eb">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="71e4762c-d477-411f-a926-8913a9be46cf">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#26e69a17-2024-4920-b4e1-dbca10860315">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#26e69a17-2024-4920-b4e1-dbca10860315">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#791">791</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_1C47B33E24485758942AD2A756143394BF7E2376" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#4be9a00b-5719-45df-a0f1-07621dfb1a40">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="4be9a00b-5719-45df-a0f1-07621dfb1a40">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#4be9a00b-5719-45df-a0f1-07621dfb1a40">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#723">723</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_72C2B78EE74B873441A263F7D964176DF45A1536" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#4fbb004c-0d34-4b11-be2f-d047c0d265ad">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="4fbb004c-0d34-4b11-be2f-d047c0d265ad">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#4fbb004c-0d34-4b11-be2f-d047c0d265ad">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#4fbb004c-0d34-4b11-be2f-d047c0d265ad">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#655">655</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_C2A1D16CB1CC4D128735796A17A1411322E6B1B0" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#08f911f5-63b2-40ff-940d-b15d85e112ec">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="08f911f5-63b2-40ff-940d-b15d85e112ec">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#08f911f5-63b2-40ff-940d-b15d85e112ec">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#689">689</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_835C4BD46FFB629533B1344AF81392E241235C5A" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#e3b93ca7-6eb1-49aa-bf76-7223db2eb853">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#c8e4c9f7-4540-4cf6-be07-bba212f93059">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#c7520f57-d299-4b92-82fb-159a97d80405">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="e3b93ca7-6eb1-49aa-bf76-7223db2eb853">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="c8e4c9f7-4540-4cf6-be07-bba212f93059">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="c7520f57-d299-4b92-82fb-159a97d80405">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#c8e4c9f7-4540-4cf6-be07-bba212f93059">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#c8e4c9f7-4540-4cf6-be07-bba212f93059">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#757">757</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_0D468A43DEB7747049443EB4EF884A4135625F54" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#562">562</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_FD4DA9B1398050558E5BF922A072C03C129097FB" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#624">624</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_8D111EF5D30668FB333D278DE18BB7084EC1BEC1" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#593">593</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_E85B239D4801966BC0C36D7D0EABDB6B3B4153A6" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <a href="../../System.Json/doc/ns_System.Json.html#ab57804b-c375-41b2-a70a-7b4dbac45717">T</a>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="ab57804b-c375-41b2-a70a-7b4dbac45717">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#ab57804b-c375-41b2-a70a-7b4dbac45717">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#825">825</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_5452FE9912EEC2CAD2FCDDA224EC9780340F70E3" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <span class="kw">bool</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#531">531</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_E0103885FB5C2EAA85A69FB9E3B88B0F08505C38" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <span class="kw">double</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#500">500</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_54062682CD69EE8046DDAA7F0FC20A9EE527901D" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fieldName, <span class="kw">int</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#469">469</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_E3F84A3CD39C44F180D8531D0B9613C98EED3828" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;K, T, H, C>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#8f4a7fe5-9c98-45c9-9956-88f88e17bf9d">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#867aaa9f-fe48-40ac-9bf6-6badb8718eea">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#224d888a-3c87-4926-8d1c-8c5c51748250">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#72e32a00-2083-4751-a029-c24a6abdcfb2">C</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="8f4a7fe5-9c98-45c9-9956-88f88e17bf9d">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="867aaa9f-fe48-40ac-9bf6-6badb8718eea">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="224d888a-3c87-4926-8d1c-8c5c51748250">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="72e32a00-2083-4751-a029-c24a6abdcfb2">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#867aaa9f-fe48-40ac-9bf6-6badb8718eea">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#867aaa9f-fe48-40ac-9bf6-6badb8718eea">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#803">803</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_7D2B463B2026736BCFE7A8B10E71C7F38CF7EAD6" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0d087a69-f0b0-4eed-83ef-0bbda2bf0740">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="0d087a69-f0b0-4eed-83ef-0bbda2bf0740">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#0d087a69-f0b0-4eed-83ef-0bbda2bf0740">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#735">735</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_7A814D4F5941FE9E25A4AE5425820D5FD4FF9BE3" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#c3f4684a-6221-4827-89e8-d9aa258d5b3d">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="c3f4684a-6221-4827-89e8-d9aa258d5b3d">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#c3f4684a-6221-4827-89e8-d9aa258d5b3d">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#c3f4684a-6221-4827-89e8-d9aa258d5b3d">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#667">667</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_CCEDB82BD07C2C9DAD559F008F26E0D15C3AEFFC" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#1e45e5d8-b803-47de-9ddc-95c84a025a0d">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="1e45e5d8-b803-47de-9ddc-95c84a025a0d">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#1e45e5d8-b803-47de-9ddc-95c84a025a0d">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#701">701</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_6F1E1E91A9CE9B3F27A7E95F2032FBD9785CC5CD" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#954b25c5-2fae-4961-8535-7d22b74478fc">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#65f1b757-b464-41e3-b551-4f72507f55bd">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#27fb2db8-0cab-4c53-8aaf-1d72ae879577">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="954b25c5-2fae-4961-8535-7d22b74478fc">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="65f1b757-b464-41e3-b551-4f72507f55bd">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="27fb2db8-0cab-4c53-8aaf-1d72ae879577">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#65f1b757-b464-41e3-b551-4f72507f55bd">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#65f1b757-b464-41e3-b551-4f72507f55bd">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#769">769</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_81D5153F2F4A29AEE9BCF03163C9DA49BD818293" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#49a2f8dc-757a-440d-93ae-4a42c9aaf563">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="49a2f8dc-757a-440d-93ae-4a42c9aaf563">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#49a2f8dc-757a-440d-93ae-4a42c9aaf563">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#881">881</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_0FDE02F2AC8E3A1E0E469FC27DE91FAB6714F244" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#572">572</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_F738AFA288AFAB4C745BD61D99B2EEEA6337335D" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#634">634</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_37C1ACCEBB7EDA0F42A57D178260B0143BBEBA17" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#603">603</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_95041BE10F45478E45EE3508DCFE9BF440E370C6" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Json/doc/ns_System.Json.html#02a9fc8b-864a-4cc6-ade9-9194faba63bb">T</a>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="02a9fc8b-864a-4cc6-ade9-9194faba63bb">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#02a9fc8b-864a-4cc6-ade9-9194faba63bb">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#837">837</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_70EE2D3B1295C9C06D9783A1F0BC443E999DCF09" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#30fafbb1-add4-4c8b-99dc-cd7da6e98af7">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="30fafbb1-add4-4c8b-99dc-cd7da6e98af7">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#30fafbb1-add4-4c8b-99dc-cd7da6e98af7">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#859">859</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_4B7564FFFFF32A4E3B2D0AD8B2601BB144CC2935" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <span class="kw">bool</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#541">541</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_DB824D49846A7E03111FBBB884E79002D2431F8A" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <span class="kw">double</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#510">510</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_9D0EF3A56DF7ED266DB174141193A894B5A409EC" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;fieldName, <span class="kw">int</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#479">479</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_1841BC18B6B4F57155CA82AD178323BC48F79296" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;K, T, H, C>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#0aa1bd08-60b4-45bf-8229-ecaa1c41d9c2">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#30a7236b-4494-44db-9857-46800e9bee93">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#04ff2d6f-9c3f-4c8c-9a19-bdd99ae6a413">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#174ffe54-bfc9-4648-a262-12b66c290f4c">C</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="0aa1bd08-60b4-45bf-8229-ecaa1c41d9c2">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="30a7236b-4494-44db-9857-46800e9bee93">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="04ff2d6f-9c3f-4c8c-9a19-bdd99ae6a413">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="174ffe54-bfc9-4648-a262-12b66c290f4c">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#30a7236b-4494-44db-9857-46800e9bee93">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#30a7236b-4494-44db-9857-46800e9bee93">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#797">797</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_27B8E570D19B486712739B7548955BF638284E2D" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#816405b4-47d1-447b-aa16-e6ed771c8be1">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="816405b4-47d1-447b-aa16-e6ed771c8be1">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#816405b4-47d1-447b-aa16-e6ed771c8be1">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#729">729</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_FF155A7B997D3D253B9080C12E91442E4B3EADD2" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#067631c0-32a2-42f0-a82a-056746e6ddaa">T</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="067631c0-32a2-42f0-a82a-056746e6ddaa">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#067631c0-32a2-42f0-a82a-056746e6ddaa">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#067631c0-32a2-42f0-a82a-056746e6ddaa">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#661">661</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_B6396B4F64B6622EC01B682A9FA07739C2EBCE4E" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#6f6d65c6-54e7-47fa-981b-68d94ae819a2">T</a>>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="6f6d65c6-54e7-47fa-981b-68d94ae819a2">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#6f6d65c6-54e7-47fa-981b-68d94ae819a2">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#695">695</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_141AD8D028A1463F11D57A1CC7D3DDBCA7EC1A26" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;Key, Value, KeyCompare>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#e855d661-c661-4205-a554-e00f81a28e49">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#350d39b1-722f-4565-8fb7-edd6c751d0b3">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#8366dd86-122d-4566-bbce-e44299b6a3fc">KeyCompare</a>>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="e855d661-c661-4205-a554-e00f81a28e49">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="350d39b1-722f-4565-8fb7-edd6c751d0b3">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="8366dd86-122d-4566-bbce-e44299b6a3fc">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#350d39b1-722f-4565-8fb7-edd6c751d0b3">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonValueType_6519CA3F247A823EA53E9BBD4C42E505C0A78F5D.html">JsonValueType</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#350d39b1-722f-4565-8fb7-edd6c751d0b3">Value</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#763">763</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_28A1E6951F82E0549D2DF5680C519D9FC076C9CB" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#567">567</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_B966CCBA3C2871F5525034998A78EA8217194B24" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#629">629</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_8EAA46E11086492741B83B71530310637D8DE4AB" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#598">598</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_06EC9ABFB5085084F92AC14030C24A856303CCC9" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson&lt;T>(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <a href="../../System.Json/doc/ns_System.Json.html#5504b653-cbd4-4b54-a063-c3516715ec12">T</a>&amp;&nbsp;field)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="5504b653-cbd4-4b54-a063-c3516715ec12">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#5504b653-cbd4-4b54-a063-c3516715ec12">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonConstructible_FDF8EB5A6050ED39397E14EF89FACCA63F29DDF2.html">JsonConstructible</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#831">831</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_E5E9BCD1395BC8C39A06FB102FF0B9E8DDF22E56" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <span class="kw">bool</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#536">536</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_62C4C32E61B89D3AB75712DBABEA0BFC3F5B1976" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <span class="kw">double</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#505">505</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_4B63168BDE07291BB93873BB968CC902EA2EA499" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;container, <span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;fieldName, <span class="kw">int</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#474">474</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_EE92D51E43D5311A8A834EC6CAFD7552BC74BC2C" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <span class="kw">double</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#42">42</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_FromJson_312EBF86915CFC46CC7A612B242406BD677FAF3C" xml:space="preserve">FromJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;FromJson(<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>*&nbsp;value, <span class="kw">int</span>&amp;&nbsp;field)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonImport.cm.html#29">29</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonImport.cm.html">System.Json/JsonImport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ParseJson_DBF1730C39BEE47518DDF489C3C1CA7CC4D29DFF" xml:space="preserve">ParseJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ParseJson(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;jsonText)</h4>
+  <p class="description" xml:space="preserve">Converts a <a href="https://www.json.org/"> JSON</a> string to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> .</p>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/Json.cm.html#275">275</a>&nbsp;of&nbsp;<a href="../../System.Json/file/Json.cm.html">System.Json/Json.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ParseJson_AA1EB3D4CCCAA45FDB88817F137BB8925D3738A7" xml:space="preserve">ParseJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ParseJson(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;jsonText)</h4>
+  <p class="description" xml:space="preserve">Converts a <a href="https://www.json.org/"> JSON</a> string to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> .</p>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/Json.cm.html#285">285</a>&nbsp;of&nbsp;<a href="../../System.Json/file/Json.cm.html">System.Json/Json.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ParseJson_2F088677CC9179ED41188E987956FF77EB3BEDB4" xml:space="preserve">ParseJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ParseJson(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;jsonText)</h4>
+  <p class="description" xml:space="preserve">Converts a <a href="https://www.json.org/"> JSON</a> string to a <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> .</p>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/Json.cm.html#280">280</a>&nbsp;of&nbsp;<a href="../../System.Json/file/Json.cm.html">System.Json/Json.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_RegisterJsonClass_2FBE4E8832266A3352BF1717BFB867612A99D471" xml:space="preserve">RegisterJsonClass&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;RegisterJsonClass(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;jsonClassName, <a href="../../System.Json/doc/ns_System.Json.html#delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">JsonClassCreatorDelegate</a>&nbsp;creator)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonClassFactory.cm.html#43">43</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonClassFactory.cm.html">System.Json/JsonClassFactory.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_RegisterJsonClass_A3D18EABE8AD1F9D0C4A42DF133AD4E9CC2F8B98" xml:space="preserve">RegisterJsonClass&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;RegisterJsonClass(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;jsonClassName, <a href="../../System.Json/doc/ns_System.Json.html#delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">JsonClassCreatorDelegate</a>&nbsp;creator)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonClassFactory.cm.html#53">53</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonClassFactory.cm.html">System.Json/JsonClassFactory.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_RegisterJsonClass_F2E6271DBF6A1478AD929ED54A519E0D2BCBD5AE" xml:space="preserve">RegisterJsonClass&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;RegisterJsonClass(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;jsonClassName, <a href="../../System.Json/doc/ns_System.Json.html#delegate_JsonClassCreatorDelegate_BC30B9B3B8E8441F2BC4BDA074B418446D65EA34">JsonClassCreatorDelegate</a>&nbsp;creator)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonClassFactory.cm.html#48">48</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonClassFactory.cm.html">System.Json/JsonClassFactory.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_574858316A43DEC277D82C9372FC90DD066D0EAC" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson(<span class="kw">bool</span>&nbsp;value)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#61">61</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_D41D6D0DCA6C2F2E779486F47F8BFD91D47426EA" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;K, T, H, C>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#3c3c1e3d-de6a-464e-adfa-0779f7e0f3cc">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#86d508e2-5e9a-4646-866e-a01b17f86436">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#982a821a-5363-4015-890e-13a5b21b3a09">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#90b3c777-5447-4376-89d2-819f2f8a0297">C</a>>&amp;&nbsp;value)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="3c3c1e3d-de6a-464e-adfa-0779f7e0f3cc">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="86d508e2-5e9a-4646-866e-a01b17f86436">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="982a821a-5363-4015-890e-13a5b21b3a09">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="90b3c777-5447-4376-89d2-819f2f8a0297">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#3c3c1e3d-de6a-464e-adfa-0779f7e0f3cc">K</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#111">111</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_91FBDD8DFFF0BEB6D6C29EC753DF3D9249916F3C" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;K, T, H, C>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_HashMap_K_T_H_C_D555F9108F5700505E1FCCC02041016E58EE9314.html">HashMap</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#33f8ca72-4fc9-447a-af26-08e8d536df68">K</a>, <a href="../../System.Json/doc/ns_System.Json.html#707b8459-1635-4b09-ba98-be6034d8f44a">T</a>, <a href="../../System.Json/doc/ns_System.Json.html#040bff1f-ef86-41c9-a64b-359e7a29116f">H</a>, <a href="../../System.Json/doc/ns_System.Json.html#423caa56-e96c-4f08-b863-846fe74dae9e">C</a>>&amp;&nbsp;value)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="33f8ca72-4fc9-447a-af26-08e8d536df68">
+    <td class="rightAlignedCol" xml:space="preserve">K</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="707b8459-1635-4b09-ba98-be6034d8f44a">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="040bff1f-ef86-41c9-a64b-359e7a29116f">
+    <td class="rightAlignedCol" xml:space="preserve">H</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="423caa56-e96c-4f08-b863-846fe74dae9e">
+    <td class="rightAlignedCol" xml:space="preserve">C</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#33f8ca72-4fc9-447a-af26-08e8d536df68">K</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#33f8ca72-4fc9-447a-af26-08e8d536df68">K</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#121">121</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_8FF6AD1D7D1AF315BBE189E97243F7B20A759CCE" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;T>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#9dfc0305-4c3f-4de9-8a9d-2d6ef40f6bbc">T</a>>&amp;&nbsp;value)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="9dfc0305-4c3f-4de9-8a9d-2d6ef40f6bbc">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#81">81</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_660ADE07D30699D123CC5F0BECA3E252DF64B33D" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;Key, Value, KeyCompare>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#d66fdb8f-b22a-47fd-a66c-a78a8d49cfe6">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#b0eb6665-a0a0-476c-a777-3ebfa1758317">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#3c91c59e-f8a0-4291-90ae-8a5bd73d0ace">KeyCompare</a>>&amp;&nbsp;value)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="d66fdb8f-b22a-47fd-a66c-a78a8d49cfe6">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="b0eb6665-a0a0-476c-a777-3ebfa1758317">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="3c91c59e-f8a0-4291-90ae-8a5bd73d0ace">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#d66fdb8f-b22a-47fd-a66c-a78a8d49cfe6">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_ustring_1750E1C62AAF5897C1F1DA3C5BC4999982AE9B36">ustring</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#91">91</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_F05F6792D09977AF3EDA3344A6CAA5403D58AFD1" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;Key, Value, KeyCompare>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Map_Key_Value_KeyCompare_734D5EBC9BF418F0903F1E19A7338E2D82C029AE.html">Map</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#75a9bae7-24a4-4c69-9533-25fb86f53877">Key</a>, <a href="../../System.Json/doc/ns_System.Json.html#cc47c9c9-818b-455b-98af-aa1bd1ff7182">Value</a>, <a href="../../System.Json/doc/ns_System.Json.html#23ac4b30-f9b8-45ea-98b6-ae4e6a6bfdac">KeyCompare</a>>&amp;&nbsp;value)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="75a9bae7-24a4-4c69-9533-25fb86f53877">
+    <td class="rightAlignedCol" xml:space="preserve">Key</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="cc47c9c9-818b-455b-98af-aa1bd1ff7182">
+    <td class="rightAlignedCol" xml:space="preserve">Value</td>
+    <td xml:space="preserve"/>
+   </tr>
+   <tr id="23ac4b30-f9b8-45ea-98b6-ae4e6a6bfdac">
+    <td class="rightAlignedCol" xml:space="preserve">KeyCompare</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#75a9bae7-24a4-4c69-9533-25fb86f53877">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_wstring_EDB6336488DF46A7779AFB4209BAB1DAF59B5DAE">wstring</a>
+   &nbsp;<span class="kw">or</span>
+   &nbsp;<a href="../../System.Json/doc/ns_System.Json.html#75a9bae7-24a4-4c69-9533-25fb86f53877">Key</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Base/doc/ns_System.html#typedef_string_B6DB6B2DEFC437FBF697A2E84F7B7771FC1DDEE3">string</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#101">101</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_644044BAF600DEEDF2C36244ACC2EA1E2C07DAD6" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;T>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_SharedPtr_T_E2198BEF58335A9A782FD48D7E8DFFD1A2D8865F.html">SharedPtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#45d00b38-f23b-41ac-82e2-8ee0fccba68f">T</a>>&amp;&nbsp;ptr)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="45d00b38-f23b-41ac-82e2-8ee0fccba68f">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#45d00b38-f23b-41ac-82e2-8ee0fccba68f">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#39">39</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_B74042AE374BEB28C90779B6CA4C98DA72081002" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;value)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#66">66</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_7F3B903221E5DAB4017615FC50EE5FBC968600F8" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;value)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#76">76</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_53C005E9773AC76D691F59144E23E4AE81E6EB16" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">wchar</span>>&amp;&nbsp;value)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#71">71</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_D4341533DFEB06925268DB024A00F44A7044154D" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;T>(<span class="kw">const</span>&nbsp;<a href="../../System.Json/doc/ns_System.Json.html#74f6a496-52aa-42f3-b1b7-c5309ce32eb0">T</a>&amp;&nbsp;object)</h4>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="74f6a496-52aa-42f3-b1b7-c5309ce32eb0">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#74f6a496-52aa-42f3-b1b7-c5309ce32eb0">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#16">16</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_14356EE699F7663903DB09AB9EFE1B206802DDE8" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson&lt;T>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/ns_System.Json.html#5196e532-3b9c-4153-b67e-d05b7d1f6e1a">T</a>>&amp;&nbsp;ptr)</h4>
+  <span xml:space="preserve"><p class="description" xml:space="preserve">Converts a <a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable</a> class to a unique pointer of <a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a> and returns it.</p><span xml:space="preserve"><p class="description" xml:space="preserve">A user-defined class defined with a <strong> json</strong> attribute is a <a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable</a> class.</p></span></span>
+  <h5>Template Parameters</h5>
+  <table>
+   <tr id="5196e532-3b9c-4153-b67e-d05b7d1f6e1a">
+    <td class="rightAlignedCol" xml:space="preserve">T</td>
+    <td xml:space="preserve"/>
+   </tr>
+  </table>
+  <h5>Constraint</h5>
+  <span class="indent">
+   <a href="../../System.Json/doc/ns_System.Json.html#5196e532-3b9c-4153-b67e-d05b7d1f6e1a">T</a>
+   &nbsp;<span class="kw">is</span>
+   &nbsp;<a href="../../System.Json/doc/concept_JsonExportable_380A04F1C16289D6FC8DB54C68F467C83E565340.html">JsonExportable</a>
+  </span>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#22">22</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="function_ToJson_67DBD75B6175FD816B5C6F7218DFE8FED2B4B7F7" xml:space="preserve">ToJson&nbsp;Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../System.Json/doc/class_JsonValue_B86942C2856CC5758E1FB19BBBE97E4002D4008A.html">JsonValue</a>>&nbsp;ToJson(<span class="kw">double</span>&nbsp;value)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Json/file/JsonExport.cm.html#56">56</a>&nbsp;of&nbsp;<a href="../../System.Json/file/JsonExport.cm.html">System.Json/JsonExport.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+ </body>
+</html>
