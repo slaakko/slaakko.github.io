@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Common Syntax Elements</title>
+    <link href="../../style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Appendix B Common Syntax Elements</h1>
+
+    <h2>Identifiers</h2>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.identifier">identifier</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="https://unicode.org/reports/tr31/#Default_Identifier_Syntax">Unicode identifier</a></span>
+            </td>
+        </tr>
+    </table>
+
+    Unicode character sequences that match the <a href="#rule.identifier"><em>identifier</em></a> rule above and are not reserved keywords can be used as identifiers in a <em>.lexer</em>, <em>.parser</em> or
+    <em>.spg</em> file. The <a href="lexer.html#rule.lexer-file-keyword"><em>lexer&#8209;file&#8209;keyword</em></a> rule defines reserved keywords in a <em>.lexer</em> file,
+    the <a href="parser.html#rule.parser-file-keyword"><em>parser&#8209;file&#8209;keyword</em></a> rule defines reserved keywords in a <em>.parser</em> file, and
+    the <a href="container.html#rule.container-file-keyword"><em>container&#8209;file&#8209;keyword</em></a> rule defines reserved keywords in a <em>.spg</em> file.
+
+    <h2>Literals</h2>
+
+    <p>
+        We try to be compatible with C++ literal syntax, and to accept a superset of valid C++ literals.
+    </p>
+
+    <p>
+        A string literal consists of a possibly empty sequence of string characters enclosed in double quotes:
+    </p>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.string-literal">string&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="#rule.encoding-prefix">encoding&#8209;prefix</a></span>?<br />
+                <span class="mono">"</span>
+                <span class="rule"><a href="#rule.schar">schar</a></span>*
+                <span class="mono">"</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.schar">schar</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="op">[</span>
+                <span class="op">^</span>
+                <span class="mono">"</span>
+                <span class="mono">\\</span>
+                <span class="mono">\n</span>
+                <span class="mono">\r</span>
+                <span class="op">]</span> |
+                <span class="rule"><a href="#rule.escape">escape</a></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.encoding-prefix">encoding&#8209;prefix</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">u8</span> |
+                <span class="mono">u</span> |
+                <span class="mono">U</span> |
+                <span class="mono">L</span>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        A string character may be an ordinary character that is not a double quote, a backslash, a newline or a carriage return, or it may be an escape sequence.
+        A string literal may start with an optional encoding prefix.
+    </p>
+
+    <p>
+        A character literal may be a narrow character literal, a universal character literal or a wide character litera.
+    </p>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.character-literal">character&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="#rule.narrow-char-literal">narrow&#8209;char&#8209;literal</a></span> |
+                <span class="rule"><a href="#rule.universal-char-literal">universal&#8209;char&#8209;literal</a></span> |
+                <span class="rule"><a href="#rule.universal-char-literal">wide&#8209;char&#8209;literal</a></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.narrow-char-literal">narrow&#8209;char&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">'</span>
+                <span class="rule"><a href="#rule.cchar">cchar</a></span>+
+                <span class="mono">'</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.universal-char-literal">universal&#8209;char&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                (<span class="mono">u</span> | <span class="mono">U</span>)
+                <span class="mono">'</span>
+                <span class="rule"><a href="#rule.cchar">cchar</a></span>+
+                <span class="mono">'</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.wide-char-literal">wide&#8209;char&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">L</span>
+                <span class="mono">'</span>
+                <span class="rule"><a href="#rule.cchar">cchar</a></span>+
+                <span class="mono">'</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.cchar">cchar</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="op">[</span>
+                <span class="op">^</span>
+                <span class="mono">'</span>
+                <span class="mono">\\</span>
+                <span class="mono">\n</span>
+                <span class="mono">\r</span>
+                <span class="op">]</span> |
+                <span class="rule"><a href="#rule.escape">escape</a></span>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        A narrow character literal consists of a non-empty sequence of symbols matching the <em>cchar</em> rule enclosed in single quotes.
+        A <em>cchar</em> is either an ordinary character that is not a single quote, a backslash, a newline or a carriage return, or it may be an escape sequence.
+        A universal character literal has a 'u' or 'U' prefix. A wide character literal has an 'L' prefix.
+    </p>
+
+    <p>
+        An escape sequence starts with the backslash character that is followed by a hexadecimal escape, a decimal escape, an octal escape, a UTF-16 escape, a UTF-32 escape, a C-escape,
+        or any other single character.
+    </p>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.escape">escape</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">\</span>
+                (
+                (<span class="mono">x</span> | <span class="mono">X</span>)
+                <span class="rule"><a href="#rule.hex-digit">hex&#8209;digit</a></span>+ |
+                (<span class="mono">d</span> | <span class="mono">D</span>)
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>+ |
+                <span class="rule"><a href="#rule.octal-digit">octal&#8209;digit</a></span>+ |
+                <span class="mono">u</span> <span class="rule"><a href="#rule.hex4">hex4</a></span> |
+                <span class="mono">U</span> <span class="rule"><a href="#rule.hex8">hex8</a></span> |
+                <span class="op">[</span>
+                <span class="mono">abfnrtv</span>
+                <span class="op">]</span> |<br />
+                <span class="mono">'any other character'</span>
+                )
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.dec-digit">dec&#8209;digit</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="op">[</span>
+                <span class="mono">0</span> <span class="op">-</span> <span class="mono">9</span>
+                <span class="op">]</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.hex-digit">hex&#8209;digit</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="op">[</span>
+                <span class="mono">0</span> <span class="op">-</span> <span class="mono">9</span> |
+                <span class="mono">a</span> <span class="op">-</span> <span class="mono">f</span> |
+                <span class="mono">A</span> <span class="op">-</span> <span class="mono">F</span>
+                <span class="op">]</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.octal-digit">octal&#8209;digit</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="op">[</span>
+                <span class="mono">0</span> <span class="op">-</span> <span class="mono">7</span>
+                <span class="op">]</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.hex4">hex4</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="#rule.hex-digit">hex&#8209;digit</a></span>
+                <span class="rule"><a href="#rule.hex-digit">hex&#8209;digit</a></span>
+                <span class="rule"><a href="#rule.hex-digit">hex&#8209;digit</a></span>
+                <span class="rule"><a href="#rule.hex-digit">hex&#8209;digit</a></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.hex4">hex8</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="#rule.hex4">hex4</a></span>
+                <span class="rule"><a href="#rule.hex4">hex4</a></span>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        We have tried to define an escape sequence that is a superset of a valid C++ escape sequence, so it can be used in all contexts in SoulNG syntax files.
+    </p>
+
+    <p>
+        An integer literal can be an octal literal, a decimal literal, or a hexadecimal literal. It may have an optional integer suffix:
+    </p>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.integer-literal">integer&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                (<span class="rule"><a href="#rule.octal-literal">octal&#8209;literal</a></span> |
+                <span class="rule"><a href="#rule.decimal-literal">decimal&#8209;literal</a></span> |
+                <span class="rule"><a href="#rule.hex-literal">hex&#8209;literal</a></span>)
+                <span class="rule"><a href="#rule.integer-suffix">integer&#8209;suffix</a></span>?
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.octal-literal">octal&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">0</span>
+                <span class="rule"><a href="#rule.octal-digit">octal&#8209;digit</a></span>*
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.decimal-literal">decimal&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="op">[</span>
+                <span class="mono">1</span> <span class="op">-</span> <span class="mono">9</span>
+                <span class="op">]</span>
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>*
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.hex-literal">hex&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                (<span class="mono">0x</span> | <span class="mono">0X</span>)
+                <span class="rule"><a href="#rule.hex-digit">hex&#8209;digit</a></span>+
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.integer-suffix">integer&#8209;suffix</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="#rule.unsigned-suffix">unsigned&#8209;suffix</a></span> |
+                <span class="rule"><a href="#rule.long-long-suffix">long&#8209;long&#8209;suffix</a></span> |
+                <span class="rule"><a href="#rule.long-suffix">long&#8209;suffix</a></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.unsigned-suffix">unsiged&#8209;suffix</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">u</span> | <span class="mono">U</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.long-long-suffix">long&#8209;long&#8209;suffix</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">ll</span> | <span class="mono">LL</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.long-suffix">long&#8209;suffix</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">l</span> | <span class="mono">L</span>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        A floating-point literal may be a fractional floating-point literal or an exponential floating-point literal. It may have an optional floating-point suffix:
+    </p>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.floating-literal">floating&#8209;literal</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                (<span class="rule"><a href="#rule.fraction">fraction</a></span>
+                <span class="rule"><a href="#rule.exponent">exponent</a></span>? |
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>+
+                <span class="rule"><a href="#rule.exponent">exponent</a></span>)
+                <span class="rule"><a href="#rule.floating-suffix">floating&#8209;suffix</a></span>?
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.fraction">fraction</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>*
+                <span class="mono">.</span>
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>+ |
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>+ <span class="mono">.</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.exponent">exponent</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                (<span class="mono">e</span> | <span class="mono">E</span>)
+                <span class="rule"><a href="#rule.sign">sign</a></span>?
+                <span class="rule"><a href="#rule.dec-digit">dec&#8209;digit</a></span>+
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.sign">sign</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">+</span> | <span class="mono">-</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="rule" id="rule.floating-suffix">floating&#8209;suffix</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">f</span> | <span class="mono">F</span> | <span class="mono">l</span> | <span class="mono">L</span>
+            </td>
+        </tr>
+    </table>
+
+    <h2>File Paths</h2>
+
+    <p>
+        A file path consists of a non-empty sequence of characters enclosed in angle brackets. A character inside the angle brackets may be any other character than a newline or a right angle bracket.
+    </p>
+
+    <table class="grammar">
+        <tr>
+            <td class="rule" id="rule.file-path">file&#8209;path</td>
+            <td class="sep">&rarr;</td>
+            <td class="rcontent">
+                <span class="mono">&lt;</span>
+                [^\n>]+
+                <span class="mono">></span>
+            </td>
+        </tr>
+    </table>
+
+    <h2>API Specifier</h2>
+
+    <p>
+        An API specifier defines a macro symbol used for exporting generated classes and functions from a Windows DLL.
+        See <strong>cmajor</strong> example in the <strong>examples/cmajor</strong> directory for an example use.
+    <p>
+
+        <table class="grammar">
+            <tr>
+                <td class="rule" id="rule.api">api</td>
+                <td class="sep">&rarr;</td>
+                <td class="rcontent">
+                    <span class="kw">api</span>
+                    <span class="mono">(</span>
+                    <span class="rule"><a href="#rule.identifier">identifer</a></span>
+                    <span class="mono">)</span>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

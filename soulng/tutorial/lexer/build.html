@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Building the Lexer</title>
+    <link href="../../style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <strong>up: </strong><a href="../../contents.html">Table of contents</a> | <strong>prev: </strong> <a href="definition.html">Lexical Analyzer</a> | <strong>next: </strong><a href="test.html">Testing the Lexer</a>
+    
+    <h1>
+        2.2 Building the Lexer
+    </h1>
+
+    <p>
+        These instructions are for the Microsoft Visual Studio Community Edition, and for the x64 configuration.
+    </p>
+
+    <h2>
+        Generating the Lexer
+    </h2>
+
+    <p>
+        The example code is in the <strong>examples/minilang</strong> directory.
+        We have created a C++ console application project with name <strong>minilang</strong> to the <strong>examples/minilang</strong> directory and
+        put the <em>Minilang.lexer</em> that contains the lexer defined in the previous stage to the <strong>examples/minilang</strong> directory and included it in the project.
+    </p>
+
+    <p>
+        Now open a command prompt in the <strong>examples/minilang</strong> directory and execute the following command:
+    </p>
+
+    <pre>
+        slg -v Minilang.lexer
+    </pre>
+
+    <p>
+        The SoulNG lexer generator <strong>slg</strong> reads a <em>Minilang.lexer</em> file.
+        If the generator detects no errors, it generates a lexical analyzer for the definitions in the <em>.lexer</em> file as C++ code:
+    </p>
+
+    <pre>
+        C:\soulng-1.0.0\examples\minilang>slg -v Minilang.lexer
+        > C:/soulng-1.0.0/examples/minilang/Minilang.lexer
+        ==> C:/soulng-1.0.0/examples/minilang/MinilangTokens.hpp
+        ==> C:/soulng-1.0.0/examples/minilang/MinilangTokens.cpp
+        ==> C:/soulng-1.0.0/examples/minilang/MinilangKeywords.hpp
+        ==> C:/soulng-1.0.0/examples/minilang/MinilangKeywords.cpp
+        ==> C:/soulng-1.0.0/examples/minilang/ClassMap.hpp
+        ==> C:/soulng-1.0.0/examples/minilang/ClassMap.cpp
+        ==> C:/soulng-1.0.0/examples/minilang/MinilangLexer.hpp
+        ==> C:/soulng-1.0.0/examples/minilang/MinilangLexer.cpp
+    </pre>
+
+    <p>
+        By giving the <em>-v</em> option, you can instruct the generator to print the paths of the input and output files as it reads and generates them.
+        If the <em>-v</em> option is not given, the generator prints nothing if the <em>.lexer</em> definition contains no errors.
+    </p>
+
+    <p>
+        The <strong>slg</strong> tool creates C++ header and source files with the file names corresponding to the identifiers defined
+        for the <em>tokens</em>, <em>keywords</em> and <em>lexer</em> declarations in the <em>.lexer file</em>.
+    </p>
+
+    <p>
+        The tool also generates files <strong>ClassMap.cpp</strong> and <strong>ClassMap.hpp</strong> that will contain a Unicode character class map for the lexer.
+    </p>
+
+    <p>
+        If a project contains many lexers, each must have a unique class map. A unique class map can be created with a
+        <a href="../../topics/syntax/lexer.html#class-map-declaration">class map declaration</a> in a <em>.lexer</em> file.
+    </p>
+
+    <p>
+        Add the generated source and header files to the <strong>minilang</strong> project.
+    </p>
+
+    <h2>
+        Compiler Settings for the Lexer Project
+    </h2>
+
+    <p>
+        The generated lexer uses the <strong>soulng/lexer</strong> and <strong>soulng/util</strong> libraries that in turn depend on the <a href="https://boost.org">Boost</a> C++ libraries,
+        so we must set the include and linker directories of the <storng>minilang</storng> project to have it compile.
+    </p>
+
+    <h3>
+        Setting the INCLUDE path of the <strong>minilang</strong> project
+    </h3>
+
+    <p>
+        Add a path to the <strong>soulng-1.0.0</strong> root directory to the <em>C/C++ / General / Additional Include Directories</em>.
+        Also add a path to the <a href="https://boost.org">Boost</a> directory to Additional Include Directories. We have boost version 1.68 installed under
+        the <strong>C:\Program Files\boost</strong> directory so we add <strong>C:\Program Files\boost\include\boost-1_68</strong> to the include path.
+        Finally add the ".." path to the include path, so we can include headers under the <strong>minilang</strong> directory in the project.
+    </p>
+
+    <h3>Linker Settings</h3>
+
+    <p>
+        Add a path to the <strong>soulng-1.0.0/lib</strong> directory to the <em>Linker / General / Additional Library Directories</em>.
+        Also add a path to the Boost library directory. We have installed the boost libraries to the <strong>C:\Program Files\boost\lib</strong> directory.
+        Finally add "$OutDir" to the library path, so we link all libraries defined in the current solution. We have currently no other libraries in this solution.
+    </p>
+
+    <p>
+        The SoulNG libraries have <strong>#pragma comment(lib, "&lt;library>.lib")</strong> declarations in the header files, so they are automatically added to the linked libraries.
+    </p>
+
+    <h2>
+        Main
+    </h2>
+
+    <p>
+        Because we are building a program it must have a <strong>main</strong> function defined somewhere. Add a source file <strong>Main.cpp</strong> with the following content
+        to the project:
+    </p>
+
+    <pre>
+        #include &lt;iostream>
+
+        int main(int argc, const char** argv)
+        {
+            return 0;
+        }
+    </pre>
+
+    <h2>
+        Compiling the Lexer Project
+    </h2>
+
+    <p>
+        Now the <strong>minilang</strong> project should compile without errors. Some warnings are generated that can be turned off by setting the <em>C/C++ Advanced / Disable Specific Warnings</em>
+        value to <strong>4251;4244</strong>.
+    </p>
+
+    <strong>up: </strong><a href="../../contents.html">Table of contents</a> | <strong>prev: </strong> <a href="definition.html">Lexical Analyzer</a> | <strong>next: </strong><a href="test.html">Testing the Lexer</a>
+</body>
+</html>
