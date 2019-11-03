@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gendoc>
+  <project name="html_">
+    <vcxproject file="../../../../tools/gendoc/html/html.vcxproj"/>
+    <documentation file="docs.xml"/>
+    <include path="../..;../../.."/>
+    <imports>
+      <import project="../../soulng/util"/>
+      <import project="../../soulng/lexer"/>
+      <import project="../../sngcpp/symbols"/>
+      <import project="../../sngxml/dom"/>
+      <import project="../../sngxml/xpath"/>
+    </imports>
+  </project>
+  <filter>
+    <file exclude="LexerFileTokenLexerClassMap.cpp"/>
+    <file exclude="LexerFileTokenLexerClassMap.hpp"/>
+    <file exclude="LexerFileTokenLexerKeywords.cpp"/>
+    <file exclude="LexerFileTokenLexerKeywords.hpp"/>
+    <file exclude="LexerFileTokenLexerTokens.cpp"/>
+    <file exclude="LexerFileTokenLexerTokens.hpp"/>
+    <file exclude="ParserFileTokenLexerClassMap.cpp"/>
+    <file exclude="ParserFileTokenLexerClassMap.hpp"/>
+    <file exclude="ParserFileTokenLexerKeywords.cpp"/>
+    <file exclude="ParserFileTokenLexerKeywords.hpp"/>
+    <file exclude="ParserFileTokenLexerTokens.cpp"/>
+    <file exclude="ParserFileTokenLexerTokens.hpp"/>
+  </filter>
+</gendoc>

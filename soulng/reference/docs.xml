@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<docs>
+  <doc id="soulng">
+    <description>core libraries and tools</description>
+  </doc>
+  <doc id="sngxml">
+    <description>XML processing libraries</description>
+  </doc>
+  <doc id="sngcpp">
+    <description>C++ front-end</description>
+  </doc>
+  <doc id="gendoc-tool">
+    <description>C++ reverse engineering tool</description>
+  </doc>
+</docs>

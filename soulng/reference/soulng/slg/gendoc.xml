@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gendoc>
+  <project name="slg">
+    <vcxproject file="../../../../soulng/slg/slg.vcxproj"/>
+    <documentation file="docs.xml"/>
+    <include path="../.."/>
+    <imports>
+      <import project="../util"/>
+      <import project="../cppcode"/>
+      <import project="../lexer"/>
+      <import project="../parser"/>
+    </imports>
+  </project>
+  <filter>
+    <file exclude="LexerFileClassMap.cpp"/>
+    <file exclude="LexerFileClassMap.hpp"/>
+    <file exclude="LexerFileKeywords.cpp"/>
+    <file exclude="LexerFileKeywords.hpp"/>
+    <file exclude="LexerFileTokens.cpp"/>
+    <file exclude="LexerFileTokens.hpp"/>
+    <file exclude="RegExClassMap.hpp"/>
+    <file exclude="RegExClassMap.cpp"/>
+    <file exclude="RegExTokens.cpp"/>
+    <file exclude="RegExTokens.hpp"/>
+  </filter>
+</gendoc>

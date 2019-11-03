@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gendoc>
+  <project name="parser">
+    <vcxproject file="../../../../sngcpp/parser/parser.vcxproj"/>
+    <include path="../.."/>
+    <imports>
+      <import project="../../soulng/parser"/>
+      <import project="../ast"/>
+      <import project="../lexer"/>
+    </imports>
+  </project>
+</gendoc>

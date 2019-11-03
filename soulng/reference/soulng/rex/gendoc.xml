@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gendoc>
+  <project name="rex">
+    <vcxproject file="../../../../soulng/rex/rex.vcxproj"/>
+    <documentation file="docs.xml"/>
+    <include path="../.."/>
+    <imports>
+      <import project="../util"/>
+      <import project="../lexer"/>
+      <import project="../parser"/>
+    </imports>
+  </project>
+  <filter>
+    <file exclude="RexClassMap.cpp"/>
+    <file exclude="RexClassMap.hpp"/>
+    <file exclude="RexTokens.cpp"/>
+    <file exclude="RexTokens.hpp"/>
+  </filter>
+</gendoc>

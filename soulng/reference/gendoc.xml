@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gendoc>
+  <project name="soulng-projects">
+    <documentation file="docs.xml"/>
+  </project>
+  <child project="soulng"/>
+  <child project="sngxml"/>
+  <child project="sngcpp"/>
+  <child project="gendoc-tool"/>
+</gendoc>
