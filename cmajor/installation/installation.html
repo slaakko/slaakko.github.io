@@ -18,7 +18,7 @@
     </h3>
 
     <p>
-        <a href="https://sourceforge.net/projects/cmajor/files/3.2.0/cmajor-3.2.0-win-x64-setup.exe">Download</a> the setup program and run it.
+        <a href="https://sourceforge.net/projects/cmajor/files/3.3.0/cmajor-3.3.0-win-x64-setup.exe">Download</a> the setup program and run it.
         You can specify installation directory that is by default <b>C:\cmajor</b>.
         Note: the compiler needs write access to installation directory and its subdirectories,
         so C:\Program Files\ is not a good place to install.
@@ -36,8 +36,8 @@
     <p>
         <ul>
             <li>
-                Download and install <a href="http://releases.llvm.org/download.html#7.0.0">LLVM 7.0</a> or newer
-                <a href="http://releases.llvm.org/7.0.0/LLVM-7.0.0-win64.exe">pre-built binaries for Windows (64-bit)</a>.
+                Download and install <a href="http://releases.llvm.org/download.html#9.0.0">LLVM 9.0.0</a> or newer
+                <a href="http://releases.llvm.org/0.0.0/LLVM-9.0.0-win64.exe">pre-built binaries for Windows (64-bit)</a>.
             </li>
             <li>
                 Add LLVM tools to System PATH so that Cmajor compiler can find them:
@@ -88,7 +88,14 @@
 
         <li>
             <p>
-                Go to <strong>C:\cmajor\vs</strong> directory and double click the <strong>cmajor.vsix</strong> Visual Studio extension, or right-click it and select Open.
+                If using Visual Studio 2017, go to <strong>C:\cmajor\vs\2017</strong> directory.
+                If using Visual Studio 2019, go to <strong>C:\cmajor\vs\2019</strong> directory.
+            </p>
+        </li>
+
+        <li>
+            <p>
+                Double click the <strong>cmajor.vsix</strong> Visual Studio extension, or right-click it and select Open.
             </p>
         </li>
 
@@ -118,7 +125,7 @@
     <ul>
         <li>
             <p>
-                Open command prompt to the <strong>C:\cmajor\vs</strong> directory for example by typing <strong>cmd</strong> to the folder line of the Windows Exporer and pressing enter:
+                Open command prompt to the <strong>C:\cmajor\vs\2019</strong> directory for example by typing <strong>cmd</strong> to the folder line of the Windows Exporer and pressing enter:
             </p>
         </li>
 
@@ -214,11 +221,11 @@
     </h3>
 
     <ul>
-        <li><a href="https://sourceforge.net/projects/cmajor/files/3.2.0/cmajor-3.2.0-ubuntu-18.04-x86_64-binaries.tar.bz2">Download</a> pre-built binaries for x86_64 Ubuntu 18.04.</li>
-        <li>Extract the package to the directory of your choice here called <em>cmajor-3.2.0</em>.</li>
-        <li>Create an environment variable named 'CMAJOR_ROOT' and set it to point to <em>/path/to/cmajor-3.2.0</em> directory. You need to add it to your shell script to make it permanent.</li>
-        <li>Insert <em>/path/to/cmajor-3.2.0/<b>bin</b></em> directory to your PATH environment variable.</li>
-        <li>Insert <em>/path/to/cmajor-3.2.0/<b>lib</b></em> directory to your LD_LIBRARY_PATH environment variable.</li>
+        <li><a href="https://sourceforge.net/projects/cmajor/files/3.3.0/cmajor-3.3.0-ubuntu-18.04-x86_64-binaries.tar.bz2">Download</a> pre-built binaries for x86_64 Ubuntu 18.04.</li>
+        <li>Extract the package to the directory of your choice here called <em>cmajor-3.3.0</em>.</li>
+        <li>Create an environment variable named 'CMAJOR_ROOT' and set it to point to <em>/path/to/cmajor-3.3.0</em> directory. You need to add it to your shell script to make it permanent.</li>
+        <li>Insert <em>/path/to/cmajor-3.3.0/<b>bin</b></em> directory to your PATH environment variable.</li>
+        <li>Insert <em>/path/to/cmajor-3.3.0/<b>lib</b></em> directory to your LD_LIBRARY_PATH environment variable.</li>
     </ul>
 
     <h3>
@@ -226,10 +233,10 @@
     </h3>
 
     <ul>
-        <li><a href="https://sourceforge.net/projects/cmajor/files/3.2.0/cmajor-3.2.0-src.tar.bz2">Download</a> Cmajor source code with unicode db.</li>
-        <li>Extract the package to the directory of your choice here called <em>cmajor-3.2.0</em>.</li>
-        <li>Create an environment variable named 'CMAJOR_ROOT' and set it to point to <em>/path/to/cmajor-3.2.0/cmajor</em> directory. You need to add it to your shell script to make it permanent.</li>
-        <li>Change to <em>cmajor-3.2.0/cmajor</em> directory and run <b>make</b> from there.</li>
+        <li><a href="https://sourceforge.net/projects/cmajor/files/3.3.0/cmajor-3.3.0-src.tar.bz2">Download</a> Cmajor source code with unicode db.</li>
+        <li>Extract the package to the directory of your choice here called <em>cmajor-3.3.0</em>.</li>
+        <li>Create an environment variable named 'CMAJOR_ROOT' and set it to point to <em>/path/to/cmajor-3.3.0/cmajor</em> directory. You need to add it to your shell script to make it permanent.</li>
+        <li>Change to <em>cmajor-3.3.0/cmajor</em> directory and run <b>make</b> from there.</li>
         <li>
             Install the binaries and libraries by running <b>sudo make install</b>. By default binaries are installed to <em>/usr/local/bin</em> and the libraries to <em>/usr/local/lib</em>.
             You can install to a different location by giving command <b>sudo make prefix=/where/to/install install</b> instead.
@@ -274,37 +281,37 @@
             </pre>
         </li>
         <li>
-            Retrieve and extract LLVM 7.0 sources (I used my home directory for this):
+            Retrieve and extract LLVM 9.0 sources (I used my home directory for this):
             <pre>
                 # LLVM:
-                wget http://releases.llvm.org/7.0.0/llvm-7.0.0.src.tar.xz
-                tar --extract --xz -f llvm-7.0.0.src.tar.xz
+                wget http://releases.llvm.org/9.0.0/llvm-9.0.0.src.tar.xz
+                tar --extract --xz -f llvm-9.0.0.src.tar.xz
                 # Clang:
-                wget http://releases.llvm.org/7.0.0/cfe-7.0.0.src.tar.xz
-                tar --extract --xz -f cfe-7.0.0.src.tar.xz
-                # move cfe-7.0.0.src directory under llvm-7.0.0.src/tools with name 'clang'
-                mv cfe-7.0.0.src llvm-7.0.0.src/tools/clang
+                wget http://releases.llvm.org/9.0.0/cfe-9.0.0.src.tar.xz
+                tar --extract --xz -f cfe-9.0.0.src.tar.xz
+                # move cfe-9.0.0.src directory under llvm-9.0.0.src/tools with name 'clang'
+                mv cfe-9.0.0.src llvm-9.0.0.src/tools/clang
                 # libcxx
-                wget http://releases.llvm.org/7.0.0/libcxx-7.0.0.src.tar.xz
-                tar --extract --xz -f libcxx-7.0.0.src.tar.xz
-                # move libcxx-7.0.0.src directory under llvm-7.0.0.src/tools with name 'libcxx'
-                mv libcxx-7.0.0.src llvm-7.0.0.src/tools/libxx
+                wget http://releases.llvm.org/9.0.0/libcxx-9.0.0.src.tar.xz
+                tar --extract --xz -f libcxx-9.0.0.src.tar.xz
+                # move libcxx-9.0.0.src directory under llvm-9.0.0.src/tools with name 'libcxx'
+                mv libcxx-9.0.0.src llvm-9.0.0.src/tools/libxx
                 # libcxxabi
-                wget http://releases.llvm.org/7.0.0/libcxxabi-7.0.0.src.tar.xz
-                tar --extract --xz -f libcxxabi-7.0.0.src.tar.xz
-                # move libcxxabi-7.0.0.src directory under llvm-7.0.0.src/tools with name 'libcxxabi'
-                mv libcxxabi-7.0.0.src llvm-7.0.0.src/tools/libcxxabi
+                wget http://releases.llvm.org/9.0.0/libcxxabi-9.0.0.src.tar.xz
+                tar --extract --xz -f libcxxabi-9.0.0.src.tar.xz
+                # move libcxxabi-9.0.0.src directory under llvm-9.0.0.src/tools with name 'libcxxabi'
+                mv libcxxabi-9.0.0.src llvm-9.0.0.src/tools/libcxxabi
                 # lld:
-                wget http://releases.llvm.org/7.0.0/lld-7.0.0.src.tar.xz
-                tar --extract --xz -f lld-7.0.0.src.tar.xz
-                # move lld-7.0.0.src directory under llvm-7.0.0.src/tools with name 'lld'
-                mv lld-7.0.0.src llvm-7.0.0.src/tools/lld
+                wget http://releases.llvm.org/9.0.0/lld-9.0.0.src.tar.xz
+                tar --extract --xz -f lld-9.0.0.src.tar.xz
+                # move lld-9.0.0.src directory under llvm-9.0.0.src/tools with name 'lld'
+                mv lld-9.0.0.src llvm-9.0.0.src/tools/lld
             </pre>
         </li>
         <li>
-            Move to llvm-7.0.0.src directory, create a build directory under it and change to the build directory:
+            Move to llvm-9.0.0.src directory, create a build directory under it and change to the build directory:
             <pre>
-                cd llvm-7.0.0.src
+                cd llvm-9.0.0.src
                 mkdir build
                 cd build
             </pre>
@@ -345,15 +352,15 @@
         <li>
             Download and extract Cmajor sources:
             <pre>
-                wget https://sourceforge.net/projects/cmajor/files/3.2.0/cmajor-3.2.0-src.tar.bz2
-                tar xjf cmajor-3.2.0-src.tar.bz2
+                wget https://sourceforge.net/projects/cmajor/files/3.3.0/cmajor-3.3.0-src.tar.bz2
+                tar xjf cmajor-3.3.0-src.tar.bz2
             </pre>
         </li>
         <li>
-            Set CMAJOR_ROOT environment variable to point to cmajor-3.2.0/cmajor directory.
+            Set CMAJOR_ROOT environment variable to point to cmajor-3.3.0/cmajor directory.
             It must be inserted to .bashrc to make it permanent.
             <pre>
-                export CMAJOR_ROOT=~/cmajor-3.2.0/cmajor
+                export CMAJOR_ROOT=~/cmajor-3.3.0/cmajor
             </pre>
         </li>
         <li>
@@ -364,9 +371,9 @@
             </pre>
         </li>
         <li>
-            Change to ~/cmajor-3.2.0/cmajor directory and run make:
+            Change to ~/cmajor-3.3.0/cmajor directory and run make:
             <pre>
-                cd ~/cmajor-3.2.0/cmajor
+                cd ~/cmajor-3.3.0/cmajor
                 make
             </pre>
         </li>
@@ -388,7 +395,7 @@
             <pre>
                 cd projects/examples/Hello
                 cmc -v Hello.cmp
-                slaakko@ACER:~/cmajor-3.2.0/cmajor/projects/examples/Hello$ bin/debug/Hello
+                slaakko@ACER:~/cmajor-3.3.0/cmajor/projects/examples/Hello$ bin/debug/Hello
                 Hello, world!
             </pre>
         </li>
