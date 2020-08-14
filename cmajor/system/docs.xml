@@ -241,7 +241,7 @@
       The System.Numerics.Multiprecision library provides three arbitrary precision number classes
       <ref>class_BigInt_9326EADB23C0E0FE1858A97CCC64FF60DD2A22D0</ref>, <ref>class_BigRational_0F62DE7516E5ADB5CE79939E2167456710EF7B23</ref> and
       <ref>class_BigFloat_BC19EFB82C8E666524B4436C56800B572EFBED53</ref> and arithmetic operations for them.
-      It is implemented by means of <a href="https://gmplib.org/">GNU Multiple Precision Arithmetic Library</a>.
+      It is implemented by means of <a href="https://www.boost.org/">Boost.Multiprecision library</a>.
     </desc>
     <details title="Example">
       This <a href="../../../examples/content/BigNumCalc/index.html">BigNumCalc</a> example program contains a multiprecision desk calculator.
@@ -345,6 +345,15 @@
     <desc>
       Use Transport Layer Security provided by the <a href="http://www.gnutls.org/">GnuTLS</a> library.
     </desc>
+  </doc>
+
+  <doc id="ns_System.Threading.Fibers">
+    <desc>
+       Contains support for fibers that are stackful explicitly scheduled coroutines.
+    </desc>
+    <details title="Example">
+      This <a href="../../../../code/cmdoc/content/FiberTest/file/FiberTest.cm.html">example program</a> shows how fibers can be used.
+    </details>
   </doc>
 
   <doc id="System.Json">
@@ -1312,9 +1321,20 @@
     </details>
   </doc>
 
+  <doc id="class_Process_6FDB48284B5FF1E26D28956730DFB867F0A83291">
+    <desc>
+       A class for executing a process and reading and writing its standard output, input and error.
+    </desc>
+    <details>
+        This <a href="../../../../code/cmdoc/content/ProcessTest/file/ProcessTest.cm.html">process test</a> 
+        example shows how to start a process using the Process class and read its standard output and error.
+    </details>
+  </doc>
+
   <doc id="ns_System.Threading">
     <desc>
       The System.Threading namespace contains basic threading support: threads, mutexes and condition variables.
+      It also contains support for processes and fibers.
     </desc>
     <details title="Examples">
       This <a href="../../../../code/threading/cmdoc/content/ThreadFunction/file/threadFunction.cm.html">threadFunction</a> example shows how to execute a function
