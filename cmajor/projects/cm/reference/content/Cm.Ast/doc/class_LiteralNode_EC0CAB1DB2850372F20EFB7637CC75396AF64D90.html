@@ -1,0 +1,87 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>LiteralNode Abstract Class</title>
+  <link href="../../../style/style.css" rel="stylesheet" type="text/css"/>
+  <script src="class_LiteralNode_EC0CAB1DB2850372F20EFB7637CC75396AF64D90_inheritance.js" type="text/javascript"> </script>
+ </head>
+ <body onload="drawInheritanceDiagram()">
+  <h1>LiteralNode Abstract Class</h1>
+  <h2>Definition</h2>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html#10">10</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html">Cm.Ast/Literal.cm</a></span>
+  <h2>Inheritance</h2>
+  <div class="diagram">
+   <svg height="0" id="inheritance_svg_diagram" version="2.0" width="0" xmlns="http://www.w3.org/2000/svg"/>
+  </div>
+  <h2>Constructors &amp; Destructor</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_LiteralNode_EC0CAB1DB2850372F20EFB7637CC75396AF64D90.html#constructor_LiteralNode_2C7CBB7035D36353BC50B99C719ED113FDB0DD93">LiteralNode</a>(<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a>&nbsp;nodeType_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;span_)</td>
+   </tr>
+  </table>
+  <h2>Member Functions</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">override</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_LiteralNode_EC0CAB1DB2850372F20EFB7637CC75396AF64D90.html#member_function_Read_LiteralNode_89AA2CB5269C5A773990DBD155FF6DB1DBE39B1C">Read</a>(<a href="../../Cm.Ast/doc/class_AstReader_2A3D0894079B8610CE897DE8B49B09674A23CBD4.html">AstReader</a>&amp;&nbsp;reader)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_LiteralNode_EC0CAB1DB2850372F20EFB7637CC75396AF64D90.html#member_function_SetText_LiteralNode_6FFE5E8CE1340BF0D43651C6E9B1B0CA90D217F7">SetText</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;text_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_LiteralNode_EC0CAB1DB2850372F20EFB7637CC75396AF64D90.html#member_function_Text_LiteralNode_CD9B786E6DCA71C9E34A7C8342C945B98E3E76EA">Text</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">override</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_LiteralNode_EC0CAB1DB2850372F20EFB7637CC75396AF64D90.html#member_function_Write_LiteralNode_494350344ADBD9819A4B30C77B81954E8800F7A5">Write</a>(<a href="../../Cm.Ast/doc/class_AstWriter_C58E383E051C8BF9E7818C9E0EFF3ECA1C7D3168.html">AstWriter</a>&amp;&nbsp;writer)</td>
+   </tr>
+  </table>
+  <h2>Member Variables</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>></td>
+    <td xml:space="preserve">text</td>
+   </tr>
+  </table>
+  <h2>Constructor&amp; Destructor Details</h2>
+  <h3 id="constructor_LiteralNode_2C7CBB7035D36353BC50B99C719ED113FDB0DD93" xml:space="preserve">LiteralNode&nbsp;Constructor</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;LiteralNode(<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a>&nbsp;nodeType_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;span_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html#12">12</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html">Cm.Ast/Literal.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h2>Member Function Details</h2>
+  <h3 id="member_function_Read_LiteralNode_89AA2CB5269C5A773990DBD155FF6DB1DBE39B1C" xml:space="preserve">Read&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">override</span>&nbsp;<span class="kw">void</span>&nbsp;Read(<a href="../../Cm.Ast/doc/class_AstReader_2A3D0894079B8610CE897DE8B49B09674A23CBD4.html">AstReader</a>&amp;&nbsp;reader)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html#29">29</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html">Cm.Ast/Literal.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetText_LiteralNode_6FFE5E8CE1340BF0D43651C6E9B1B0CA90D217F7" xml:space="preserve">SetText&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetText(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;text_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html#20">20</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html">Cm.Ast/Literal.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Text_LiteralNode_CD9B786E6DCA71C9E34A7C8342C945B98E3E76EA" xml:space="preserve">Text&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;Text()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html#16">16</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html">Cm.Ast/Literal.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Write_LiteralNode_494350344ADBD9819A4B30C77B81954E8800F7A5" xml:space="preserve">Write&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">override</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;Write(<a href="../../Cm.Ast/doc/class_AstWriter_C58E383E051C8BF9E7818C9E0EFF3ECA1C7D3168.html">AstWriter</a>&amp;&nbsp;writer)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html#24">24</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Literal.cm.html">Cm.Ast/Literal.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+ </body>
+</html>

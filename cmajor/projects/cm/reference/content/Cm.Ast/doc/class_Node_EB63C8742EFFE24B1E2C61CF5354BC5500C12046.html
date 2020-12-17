@@ -1,0 +1,359 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Node Abstract Class</title>
+  <link href="../../../style/style.css" rel="stylesheet" type="text/css"/>
+  <script src="class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046_inheritance.js" type="text/javascript"> </script>
+ </head>
+ <body onload="drawInheritanceDiagram()">
+  <h1>Node Abstract Class</h1>
+  <h2>Definition</h2>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#10">10</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <h2>Inheritance</h2>
+  <div class="diagram">
+   <svg height="0" id="inheritance_svg_diagram" version="2.0" width="0" xmlns="http://www.w3.org/2000/svg"/>
+  </div>
+  <h2>Constructors &amp; Destructor</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#constructor_Node_8D6226F949909155DB92F54F950911234DA10B96">Node</a>(<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a>&nbsp;nodeType_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;span_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">suppress</span>&nbsp;<span class="kw">nothrow</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#copy_constructor_Node_9B3E511DEB18C623D1AF8F02C99C9D6A20691A2B">Node</a>(<span class="kw">const</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>&amp;)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#destructor_Node_017163A47F8EB3E33700AA18F61132FDE2316233">~Node</a>()</td>
+   </tr>
+  </table>
+  <h2>Member Functions</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_Accept_Node_CBA9DDEEEC502C44AA91446FF73AB76C20F59A83">Accept</a>(<a href="../../Cm.Ast/doc/class_Visitor_72F6478693E803BCEBF58444921D4074489D190A.html">Visitor</a>&amp;&nbsp;visitor)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_AddArgument_Node_F99ADB976442A1CB6D6FBB74D9F934BFFADA2227">AddArgument</a>(<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;argument)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_AddParameter_Node_E897C5353136B180FB7346DFA02F528EF8A62228">AddParameter</a>(<a href="../../Cm.Ast/doc/class_ParameterNode_A94941039FB19956DDBAEEE25E681C606F360913.html">ParameterNode</a>*&nbsp;parameter)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_AddTemplateParameter_Node_363B9A6DC72AFE66FD8BD7AE6DD40603C0F229BB">AddTemplateParameter</a>(<a href="../../Cm.Ast/doc/class_TemplateParameterNode_08821AB0392462BB691FC90F3E97C51C44519A64.html">TemplateParameterNode</a>*&nbsp;templateParameter)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_Clone_Node_500789910FD0F62804EC591212A7C26C8C700751">Clone</a>(<a href="../../Cm.Ast/doc/class_CloneContext_B7643D2FFE657C21640406DF2ED0C22308DD0564.html">CloneContext</a>&amp;&nbsp;cloneContext)&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_GetNodeType_Node_C46817E7F6AA622B2F41011F755F127C6C7962E8">GetNodeType</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_GetSpan_Node_A30A47AF81CC0FDB9BA3D1872BF8A9A0FD6BC8FB">GetSpan</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_Specifiers_F886969F98C415BF7A6FE96A7097CEB28F1ABCB3.html">Specifiers</a></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_GetSpecifiers_Node_2D82202DB4B5570642F6DBBD0F180B812F440B02">GetSpecifiers</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_IsConceptNode_Node_8694C602F67CD8079691818E846EFC77F8A6AD3E">IsConceptNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_IsConditionalCompilationExpressionNode_Node_5A3BE33A9FDE1DFFA95581A7D9FA357A9A27D95B">IsConditionalCompilationExpressionNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_IsFunctionNode_Node_8BB2DD2EEEEB7BE1EF09E595D5F6BCFF14C9C0BB">IsFunctionNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_IsIntrinsicConceptNode_Node_0D06834532C561D73488690F8B2CA3944B8E8BEC">IsIntrinsicConceptNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_IsStatementNode_Node_E2C50C7FC1E88583B7723904CDC4FF805C5B8C12">IsStatementNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_IsUnsignedTypeNode_Node_E97D0219F8E046A76048D8E13BA3EA198EF053F4">IsUnsignedTypeNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_NodeIsConstraintNode_Node_5050D5D9C2FDD4532891CE17ED2E0679127D6FB6">NodeIsConstraintNode</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_Parent_Node_9441E8E1436F3463F2E61771404BC916D8CB6AC9">Parent</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_Parent_Node_25DB45AD30C5CD0AE624A908B99AD6655EAE16F5">Parent</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_Read_Node_D0C36A24AF8A6E11081C0541F164BEDB71C0FEAC">Read</a>(<a href="../../Cm.Ast/doc/class_AstReader_2A3D0894079B8610CE897DE8B49B09674A23CBD4.html">AstReader</a>&amp;&nbsp;reader)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_SetFullSpan_Node_A6546B1091B291901571F897C8E25384399C73E9">SetFullSpan</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_SetParent_Node_A5859A820FD93DA9BBE8CDFDC0E9BB3F26CB7404">SetParent</a>(<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;parent_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_SetSpan_Node_6D3F3A43F1AA299689978E88067945C125877DCD">SetSpan</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;span_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_SetSpanEnd_Node_6136AE7157A0F177DDCB11ADAC4EC5723BD55783">SetSpanEnd</a>(<span class="kw">int</span>&nbsp;end)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_SetSpanStart_Node_614613E8D9FA1996EDCCD54CB99FC4F06CD71474">SetSpanStart</a>(<span class="kw">int</span>&nbsp;spanStart)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_ToString_Node_4539C63276E5BE851C2D8DF2CB2B830525F28CDA">ToString</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#member_function_Write_Node_82A246BFCDA7BA59EF63BE831229549EEC26CECA">Write</a>(<a href="../../Cm.Ast/doc/class_AstWriter_C58E383E051C8BF9E7818C9E0EFF3ECA1C7D3168.html">AstWriter</a>&amp;&nbsp;writer)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">suppress</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html#copy_assignment_op_assign_Node_03B8EE96132B48583BFFB95BE4739A8223D90BFF">operator=</a>(<span class="kw">const</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>&amp;)</td>
+   </tr>
+  </table>
+  <h2>Member Variables</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a></td>
+    <td xml:space="preserve">nodeType</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*</td>
+    <td xml:space="preserve">parent</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a></td>
+    <td xml:space="preserve">span</td>
+   </tr>
+  </table>
+  <h2>Constructor&amp; Destructor Details</h2>
+  <h3 id="constructor_Node_8D6226F949909155DB92F54F950911234DA10B96" xml:space="preserve">Node&nbsp;Constructor</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;Node(<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a>&nbsp;nodeType_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;span_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#13">13</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="copy_constructor_Node_9B3E511DEB18C623D1AF8F02C99C9D6A20691A2B" xml:space="preserve">Node&nbsp;Constructor</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">suppress</span>&nbsp;<span class="kw">nothrow</span>&nbsp;Node(<span class="kw">const</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>&amp;)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#12">12</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="destructor_Node_017163A47F8EB3E33700AA18F61132FDE2316233" xml:space="preserve">~Node&nbsp;Destructor</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;~Node()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#17">17</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h2>Member Function Details</h2>
+  <h3 id="member_function_Accept_Node_CBA9DDEEEC502C44AA91446FF73AB76C20F59A83" xml:space="preserve">Accept&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<span class="kw">void</span>&nbsp;Accept(<a href="../../Cm.Ast/doc/class_Visitor_72F6478693E803BCEBF58444921D4074489D190A.html">Visitor</a>&amp;&nbsp;visitor)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#54">54</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddArgument_Node_F99ADB976442A1CB6D6FBB74D9F934BFFADA2227" xml:space="preserve">AddArgument&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span>&nbsp;AddArgument(<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;argument)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#59">59</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddParameter_Node_E897C5353136B180FB7346DFA02F528EF8A62228" xml:space="preserve">AddParameter&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span>&nbsp;AddParameter(<a href="../../Cm.Ast/doc/class_ParameterNode_A94941039FB19956DDBAEEE25E681C606F360913.html">ParameterNode</a>*&nbsp;parameter)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#63">63</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddTemplateParameter_Node_363B9A6DC72AFE66FD8BD7AE6DD40603C0F229BB" xml:space="preserve">AddTemplateParameter&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span>&nbsp;AddTemplateParameter(<a href="../../Cm.Ast/doc/class_TemplateParameterNode_08821AB0392462BB691FC90F3E97C51C44519A64.html">TemplateParameterNode</a>*&nbsp;templateParameter)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#67">67</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Clone_Node_500789910FD0F62804EC591212A7C26C8C700751" xml:space="preserve">Clone&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;Clone(<a href="../../Cm.Ast/doc/class_CloneContext_B7643D2FFE657C21640406DF2ED0C22308DD0564.html">CloneContext</a>&amp;&nbsp;cloneContext)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#53">53</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_GetNodeType_Node_C46817E7F6AA622B2F41011F755F127C6C7962E8" xml:space="preserve">GetNodeType&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_NodeType_363AC02A894B46CABF0894CA8E04DCAA75A5B589.html">NodeType</a>&nbsp;GetNodeType()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#21">21</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_GetSpan_Node_A30A47AF81CC0FDB9BA3D1872BF8A9A0FD6BC8FB" xml:space="preserve">GetSpan&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;GetSpan()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#25">25</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_GetSpecifiers_Node_2D82202DB4B5570642F6DBBD0F180B812F440B02" xml:space="preserve">GetSpecifiers&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_Specifiers_F886969F98C415BF7A6FE96A7097CEB28F1ABCB3.html">Specifiers</a>&nbsp;GetSpecifiers()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#99">99</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsConceptNode_Node_8694C602F67CD8079691818E846EFC77F8A6AD3E" xml:space="preserve">IsConceptNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsConceptNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#83">83</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsConditionalCompilationExpressionNode_Node_5A3BE33A9FDE1DFFA95581A7D9FA357A9A27D95B" xml:space="preserve">IsConditionalCompilationExpressionNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsConditionalCompilationExpressionNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#95">95</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsFunctionNode_Node_8BB2DD2EEEEB7BE1EF09E595D5F6BCFF14C9C0BB" xml:space="preserve">IsFunctionNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsFunctionNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#87">87</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsIntrinsicConceptNode_Node_0D06834532C561D73488690F8B2CA3944B8E8BEC" xml:space="preserve">IsIntrinsicConceptNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsIntrinsicConceptNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#91">91</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsStatementNode_Node_E2C50C7FC1E88583B7723904CDC4FF805C5B8C12" xml:space="preserve">IsStatementNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsStatementNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#75">75</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsUnsignedTypeNode_Node_E97D0219F8E046A76048D8E13BA3EA198EF053F4" xml:space="preserve">IsUnsignedTypeNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsUnsignedTypeNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#71">71</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_NodeIsConstraintNode_Node_5050D5D9C2FDD4532891CE17ED2E0679127D6FB6" xml:space="preserve">NodeIsConstraintNode&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;NodeIsConstraintNode()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#79">79</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Parent_Node_9441E8E1436F3463F2E61771404BC916D8CB6AC9" xml:space="preserve">Parent&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;Parent()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#45">45</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Parent_Node_25DB45AD30C5CD0AE624A908B99AD6655EAE16F5" xml:space="preserve">Parent&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;Parent()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#41">41</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Read_Node_D0C36A24AF8A6E11081C0541F164BEDB71C0FEAC" xml:space="preserve">Read&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">void</span>&nbsp;Read(<a href="../../Cm.Ast/doc/class_AstReader_2A3D0894079B8610CE897DE8B49B09674A23CBD4.html">AstReader</a>&amp;&nbsp;reader)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#106">106</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetFullSpan_Node_A6546B1091B291901571F897C8E25384399C73E9" xml:space="preserve">SetFullSpan&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetFullSpan()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#109">109</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetParent_Node_A5859A820FD93DA9BBE8CDFDC0E9BB3F26CB7404" xml:space="preserve">SetParent&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetParent(<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>*&nbsp;parent_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#49">49</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetSpan_Node_6D3F3A43F1AA299689978E88067945C125877DCD" xml:space="preserve">SetSpan&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetSpan(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Lex/doc/class_Span_BD14F38E21FE17B2F59D2E90BFB5D984755F9267.html">Span</a>&amp;&nbsp;span_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#29">29</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetSpanEnd_Node_6136AE7157A0F177DDCB11ADAC4EC5723BD55783" xml:space="preserve">SetSpanEnd&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetSpanEnd(<span class="kw">int</span>&nbsp;end)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#37">37</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetSpanStart_Node_614613E8D9FA1996EDCCD54CB99FC4F06CD71474" xml:space="preserve">SetSpanStart&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetSpanStart(<span class="kw">int</span>&nbsp;spanStart)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#33">33</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ToString_Node_4539C63276E5BE851C2D8DF2CB2B830525F28CDA" xml:space="preserve">ToString&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&nbsp;ToString()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#55">55</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Write_Node_82A246BFCDA7BA59EF63BE831229549EEC26CECA" xml:space="preserve">Write&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;Write(<a href="../../Cm.Ast/doc/class_AstWriter_C58E383E051C8BF9E7818C9E0EFF3ECA1C7D3168.html">AstWriter</a>&amp;&nbsp;writer)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#103">103</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="copy_assignment_op_assign_Node_03B8EE96132B48583BFFB95BE4739A8223D90BFF" xml:space="preserve">operator=&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">suppress</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>&amp;&nbsp;operator=(<span class="kw">const</span>&nbsp;<a href="../../Cm.Ast/doc/class_Node_EB63C8742EFFE24B1E2C61CF5354BC5500C12046.html">Node</a>&amp;)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Node.cm.html#20">20</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Node.cm.html">Cm.Ast/Node.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,630 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Project Class</title>
+  <link href="../../../style/style.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <h1>Project Class</h1>
+  <h2>Definition</h2>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#177">177</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <h2>Constructors &amp; Destructor</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#constructor_Project_F179EA485E6CBB2DB59F7F4B520DB89A4718E37D">Project</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;name_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;filePath_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;config_, <a href="../../Cm.Ast/doc/enumerated_type_BackEnd_31D4FFB71658833BABDCD3B7D12D224B4305C822.html">BackEnd</a>&nbsp;backend_)</td>
+   </tr>
+  </table>
+  <h2>Member Functions</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_AddDeclaration_Project_2F58CDB968CE4B6ED1CDBE9B02B4F58EF7E9EF3A">AddDeclaration</a>(<a href="../../Cm.Ast/doc/class_ProjectDeclaration_3EB30B6C6B6D75FC239350C6A551D708460C09A2.html">ProjectDeclaration</a>*&nbsp;declaration)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_AddDependsOnProject_Project_2D404333FFF9A7D5F6CC5A67E051F95E07FE0DBC">AddDependsOnProject</a>(<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*&nbsp;dependsOnProject)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_AddResourceFileName_Project_9233A250FFBCC0C90F7ED2107260910BC0F0C44F">AddResourceFileName</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;resourceFileName, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;resourceFilePath)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_AddSourceFileName_Project_35D371E619815FB1CB9CAC514DE7094DD36BCBA6">AddSourceFileName</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;sourceFileName, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;sourceFilePath)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_AddTextFileName_Project_E3C71E7C6D3FE7ACE03C4AA8B3019F87549C80AA">AddTextFileName</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;textFileName, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;textFilePath)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_Built_Project_0AFDB13B0597ABD29E8C9CDFF57473D0140F1D02">Built</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_DependsOn_Project_0FE641CF769BAF8B1FD5AC0433C88EA9CFD13073">DependsOn</a>(<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*&nbsp;that)&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_DependsOnProjects_Project_4B5C27D56AA162D955B306E23298FC2AB73B53C8">DependsOnProjects</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_ExecutableFilePath_Project_CA3AAD330815AD8553643283910B9335FF3F25C3">ExecutableFilePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_FilePath_Project_A3921CBC23E7ED3E0985A2BF254D91D27F16FB35">FilePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_Target_FAC62076E977D07254A9A1E38957A64C7C53200C.html">Target</a></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_GetTarget_Project_004E13B1C58281D9F8DD6DDBCB99BFB99E6D1E4F">GetTarget</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">int</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_Index_Project_D94C9F822E010F00A978D11C5638013C5F7A1431">Index</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_IsSystemProject_Project_34F8BD2A91D29A46DDFA5821E667E4A8715BB7A3">IsSystemProject</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_IsUpToDate_Project_CA458470CFC0DE0D11116DA8B199E27912CF6D8D">IsUpToDate</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;systemModuleFilePath)&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_LibraryFilePath_Project_0FD60F0E1BCCAC5B7D8D27065AC10B026971AEBB">LibraryFilePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">int</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_LogStreamId_Project_0561C3B0B660E26E4966D01C94DC1FDF39FF4E2F">LogStreamId</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_ModuleFilePath_Project_9284ED4204A6796F0AE216BF06B040A2AB5A5BD7">ModuleFilePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_Name_Project_2B2267AAD2BFAC3EFECF9D146E347B8E1DA19F48">Name</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_OutDirBasePath_Project_6556B69C99F9AE855608B241A9C2CF24E4086645">OutDirBasePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_Ready_Project_6A468BBB279AF9C99D1F362F18929C375DF75A9A">Ready</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_ReferencedProjectFilePaths_Project_26842DA432806841065A09E5253B26E1521602B2">ReferencedProjectFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_References_Project_F1CFA073CB77E833AE78AE2C6B9323E3840671C3">References</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_RelativeFilePath_Project_137E1680C029DE52FB970CADDD8B049484DF28D6">RelativeFilePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_RelativeReferencedProjectFilePaths_Project_597AF29CD2ED2F5FDBD158437FA7959BA1D67696">RelativeReferencedProjectFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_RelativeResourceFilePaths_Project_F259E9833C1A3B51AD31BFAC48EB174C90EB530B">RelativeResourceFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_RelativeSourceFilePaths_Project_AD0DC4DB5245E8AA5CEF5A0367781B44D1A4182A">RelativeSourceFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_RelativeTextFilePaths_Project_9FAB561265E288B4C69351DE3DAF1EAEBDABD0B4">RelativeTextFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_RemoveFile_Project_3AF14F7BDFFED319B29837DF1D5D09911B3E49FB">RemoveFile</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;filePath, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fileName)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_ResolveDeclarations_Project_E96C27EC8F85D3CCE1BAFEC445D728FB8373371D">ResolveDeclarations</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_ResourceFilePaths_Project_93942520C6138968145293A874779EB320DE917D">ResourceFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_Save_Project_497A4BB557953AE9804871B5D4B3E5DA6C00A89B">Save</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetBuilt_Project_E911964E46895FE643C31E87BD5B097430A4F8C9">SetBuilt</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetExcludeSourceFilePath_Project_A1312EEE70632DE3F5ED6AA3C1C36740731A6C5E">SetExcludeSourceFilePath</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;excludeSourceFilePath_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetIndex_Project_62958AE1B5E7CF1C5B868ED2F6EDBE6D0F5F6229">SetIndex</a>(<span class="kw">int</span>&nbsp;index_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetLibraryFilePath_Project_D9CE202B879EF22B1FD45981AC99A380300B75C2">SetLibraryFilePath</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;libraryFilePath_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetLogStreamId_Project_67AAF9E8794002DDB1647B70DAD09FC9D67A118A">SetLogStreamId</a>(<span class="kw">int</span>&nbsp;logStreamId_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetModuleFilePath_Project_F96B52A0D42886C4F2EFE6804D8849E14DAA018B">SetModuleFilePath</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;moduleFilePath_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetReferencedProjects_Project_9301CE67B06C71AA9449B0092CEF2E833393615F">SetReferencedProjects</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*>&amp;&nbsp;referencedProjects)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetRelativeFilePath_Project_2A638199C8BD9D538606AE7D82AAA7490A109076">SetRelativeFilePath</a>(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;relativeFilePath_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetSystemProject_Project_1FF72EC1DA2F29EB4B8C1A3ACD28986EB982041B">SetSystemProject</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SetTarget_Project_5084F0FCB79DFBF4F374941F1353C2C73CF43A3A">SetTarget</a>(<a href="../../Cm.Ast/doc/enumerated_type_Target_FAC62076E977D07254A9A1E38957A64C7C53200C.html">Target</a>&nbsp;target_)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SourceBasePath_Project_E5FACB462FCF77113F6D3F910ACC03CDF5629D45">SourceBasePath</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_SourceFilePaths_Project_0E1A4474F1B4E27616865CEADA6F698FA2D0AD27">SourceFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;</td>
+    <td xml:space="preserve"><a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html#member_function_TextFilePaths_Project_1DE77C2AFC4352D5316D84173D41A995930A8225">TextFilePaths</a>()&nbsp;<span class="kw">const</span></td>
+   </tr>
+  </table>
+  <h2>Member Variables</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_BackEnd_31D4FFB71658833BABDCD3B7D12D224B4305C822.html">BackEnd</a></td>
+    <td xml:space="preserve">backend</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve">built</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">config</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_UniquePtr_T_793F841C13E9DD3A6869243C74F1D948C0E04009.html">UniquePtr</a>&lt;<a href="../../Cm.Ast/doc/class_ProjectDeclaration_3EB30B6C6B6D75FC239350C6A551D708460C09A2.html">ProjectDeclaration</a>>></td>
+    <td xml:space="preserve">declarations</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*></td>
+    <td xml:space="preserve">dependsOn</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">excludeSourceFilePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">executableFilePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">filePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<span class="kw">int</span></td>
+    <td xml:space="preserve">index</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<span class="kw">bool</span></td>
+    <td xml:space="preserve">isSystemProject</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">libraryFilePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<span class="kw">int</span></td>
+    <td xml:space="preserve">logStreamId</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">moduleFilePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>></td>
+    <td xml:space="preserve">name</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">outDirBasePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">referencedProjectFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">references</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">relativeFilePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">relativeReferencedProjectFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">relativeResourceFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">relativeSourceFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">relativeTextFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">resourceFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">sourceBasePath</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">sourceFilePaths</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>></td>
+    <td xml:space="preserve">systemLibDir</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_Target_FAC62076E977D07254A9A1E38957A64C7C53200C.html">Target</a></td>
+    <td xml:space="preserve">target</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">private</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>></td>
+    <td xml:space="preserve">textFilePaths</td>
+   </tr>
+  </table>
+  <h2>Constructor&amp; Destructor Details</h2>
+  <h3 id="constructor_Project_F179EA485E6CBB2DB59F7F4B520DB89A4718E37D" xml:space="preserve">Project&nbsp;Constructor</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;Project(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;name_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;filePath_, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;config_, <a href="../../Cm.Ast/doc/enumerated_type_BackEnd_31D4FFB71658833BABDCD3B7D12D224B4305C822.html">BackEnd</a>&nbsp;backend_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#179">179</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h2>Member Function Details</h2>
+  <h3 id="member_function_AddDeclaration_Project_2F58CDB968CE4B6ED1CDBE9B02B4F58EF7E9EF3A" xml:space="preserve">AddDeclaration&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;AddDeclaration(<a href="../../Cm.Ast/doc/class_ProjectDeclaration_3EB30B6C6B6D75FC239350C6A551D708460C09A2.html">ProjectDeclaration</a>*&nbsp;declaration)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#467">467</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddDependsOnProject_Project_2D404333FFF9A7D5F6CC5A67E051F95E07FE0DBC" xml:space="preserve">AddDependsOnProject&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;AddDependsOnProject(<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*&nbsp;dependsOnProject)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#347">347</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddResourceFileName_Project_9233A250FFBCC0C90F7ED2107260910BC0F0C44F" xml:space="preserve">AddResourceFileName&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;AddResourceFileName(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;resourceFileName, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;resourceFilePath)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#300">300</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddSourceFileName_Project_35D371E619815FB1CB9CAC514DE7094DD36BCBA6" xml:space="preserve">AddSourceFileName&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;AddSourceFileName(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;sourceFileName, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;sourceFilePath)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#293">293</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_AddTextFileName_Project_E3C71E7C6D3FE7ACE03C4AA8B3019F87549C80AA" xml:space="preserve">AddTextFileName&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;AddTextFileName(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;textFileName, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;textFilePath)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#307">307</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Built_Project_0AFDB13B0597ABD29E8C9CDFF57473D0140F1D02" xml:space="preserve">Built&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;Built()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#444">444</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_DependsOn_Project_0FE641CF769BAF8B1FD5AC0433C88EA9CFD13073" xml:space="preserve">DependsOn&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;DependsOn(<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*&nbsp;that)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#343">343</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_DependsOnProjects_Project_4B5C27D56AA162D955B306E23298FC2AB73B53C8" xml:space="preserve">DependsOnProjects&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*>&amp;&nbsp;DependsOnProjects()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#440">440</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ExecutableFilePath_Project_CA3AAD330815AD8553643283910B9335FF3F25C3" xml:space="preserve">ExecutableFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;ExecutableFilePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#260">260</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_FilePath_Project_A3921CBC23E7ED3E0985A2BF254D91D27F16FB35" xml:space="preserve">FilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;FilePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#232">232</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_GetTarget_Project_004E13B1C58281D9F8DD6DDBCB99BFB99E6D1E4F" xml:space="preserve">GetTarget&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<a href="../../Cm.Ast/doc/enumerated_type_Target_FAC62076E977D07254A9A1E38957A64C7C53200C.html">Target</a>&nbsp;GetTarget()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#236">236</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Index_Project_D94C9F822E010F00A978D11C5638013C5F7A1431" xml:space="preserve">Index&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">int</span>&nbsp;Index()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#432">432</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsSystemProject_Project_34F8BD2A91D29A46DDFA5821E667E4A8715BB7A3" xml:space="preserve">IsSystemProject&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">bool</span>&nbsp;IsSystemProject()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#351">351</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_IsUpToDate_Project_CA458470CFC0DE0D11116DA8B199E27912CF6D8D" xml:space="preserve">IsUpToDate&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">bool</span>&nbsp;IsUpToDate(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;systemModuleFilePath)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#398">398</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_LibraryFilePath_Project_0FD60F0E1BCCAC5B7D8D27065AC10B026971AEBB" xml:space="preserve">LibraryFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;LibraryFilePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#256">256</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_LogStreamId_Project_0561C3B0B660E26E4966D01C94DC1FDF39FF4E2F" xml:space="preserve">LogStreamId&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">int</span>&nbsp;LogStreamId()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#424">424</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ModuleFilePath_Project_9284ED4204A6796F0AE216BF06B040A2AB5A5BD7" xml:space="preserve">ModuleFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;ModuleFilePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#252">252</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Name_Project_2B2267AAD2BFAC3EFECF9D146E347B8E1DA19F48" xml:space="preserve">Name&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">uchar</span>>&amp;&nbsp;Name()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#228">228</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_OutDirBasePath_Project_6556B69C99F9AE855608B241A9C2CF24E4086645" xml:space="preserve">OutDirBasePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;OutDirBasePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#248">248</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Ready_Project_6A468BBB279AF9C99D1F362F18929C375DF75A9A" xml:space="preserve">Ready&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">bool</span>&nbsp;Ready()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#452">452</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ReferencedProjectFilePaths_Project_26842DA432806841065A09E5253B26E1521602B2" xml:space="preserve">ReferencedProjectFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;ReferencedProjectFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#268">268</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_References_Project_F1CFA073CB77E833AE78AE2C6B9323E3840671C3" xml:space="preserve">References&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;References()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#264">264</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_RelativeFilePath_Project_137E1680C029DE52FB970CADDD8B049484DF28D6" xml:space="preserve">RelativeFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;RelativeFilePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#363">363</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_RelativeReferencedProjectFilePaths_Project_597AF29CD2ED2F5FDBD158437FA7959BA1D67696" xml:space="preserve">RelativeReferencedProjectFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;RelativeReferencedProjectFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#272">272</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_RelativeResourceFilePaths_Project_F259E9833C1A3B51AD31BFAC48EB174C90EB530B" xml:space="preserve">RelativeResourceFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;RelativeResourceFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#331">331</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_RelativeSourceFilePaths_Project_AD0DC4DB5245E8AA5CEF5A0367781B44D1A4182A" xml:space="preserve">RelativeSourceFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;RelativeSourceFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#323">323</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_RelativeTextFilePaths_Project_9FAB561265E288B4C69351DE3DAF1EAEBDABD0B4" xml:space="preserve">RelativeTextFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;RelativeTextFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#335">335</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_RemoveFile_Project_3AF14F7BDFFED319B29837DF1D5D09911B3E49FB" xml:space="preserve">RemoveFile&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;RemoveFile(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;filePath, <span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;fileName)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#314">314</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ResolveDeclarations_Project_E96C27EC8F85D3CCE1BAFEC445D728FB8373371D" xml:space="preserve">ResolveDeclarations&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;ResolveDeclarations()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#471">471</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ResourceFilePaths_Project_93942520C6138968145293A874779EB320DE917D" xml:space="preserve">ResourceFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;ResourceFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#327">327</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Save_Project_497A4BB557953AE9804871B5D4B3E5DA6C00A89B" xml:space="preserve">Save&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">void</span>&nbsp;Save()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#375">375</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetBuilt_Project_E911964E46895FE643C31E87BD5B097430A4F8C9" xml:space="preserve">SetBuilt&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetBuilt()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#448">448</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetExcludeSourceFilePath_Project_A1312EEE70632DE3F5ED6AA3C1C36740731A6C5E" xml:space="preserve">SetExcludeSourceFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetExcludeSourceFilePath(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;excludeSourceFilePath_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#463">463</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetIndex_Project_62958AE1B5E7CF1C5B868ED2F6EDBE6D0F5F6229" xml:space="preserve">SetIndex&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetIndex(<span class="kw">int</span>&nbsp;index_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#436">436</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetLibraryFilePath_Project_D9CE202B879EF22B1FD45981AC99A380300B75C2" xml:space="preserve">SetLibraryFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetLibraryFilePath(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;libraryFilePath_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#371">371</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetLogStreamId_Project_67AAF9E8794002DDB1647B70DAD09FC9D67A118A" xml:space="preserve">SetLogStreamId&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetLogStreamId(<span class="kw">int</span>&nbsp;logStreamId_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#428">428</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetModuleFilePath_Project_F96B52A0D42886C4F2EFE6804D8849E14DAA018B" xml:space="preserve">SetModuleFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetModuleFilePath(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;moduleFilePath_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#367">367</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetReferencedProjects_Project_9301CE67B06C71AA9449B0092CEF2E833393615F" xml:space="preserve">SetReferencedProjects&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetReferencedProjects(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../Cm.Ast/doc/class_Project_F15D5673E1F3BE4584C850F71E6C29D3F9C5FDFB.html">Project</a>*>&amp;&nbsp;referencedProjects)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#276">276</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetRelativeFilePath_Project_2A638199C8BD9D538606AE7D82AAA7490A109076" xml:space="preserve">SetRelativeFilePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetRelativeFilePath(<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;relativeFilePath_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#359">359</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetSystemProject_Project_1FF72EC1DA2F29EB4B8C1A3ACD28986EB982041B" xml:space="preserve">SetSystemProject&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetSystemProject()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#355">355</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SetTarget_Project_5084F0FCB79DFBF4F374941F1353C2C73CF43A3A" xml:space="preserve">SetTarget&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">void</span>&nbsp;SetTarget(<a href="../../Cm.Ast/doc/enumerated_type_Target_FAC62076E977D07254A9A1E38957A64C7C53200C.html">Target</a>&nbsp;target_)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#240">240</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SourceBasePath_Project_E5FACB462FCF77113F6D3F910ACC03CDF5629D45" xml:space="preserve">SourceBasePath&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>&amp;&nbsp;SourceBasePath()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#244">244</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_SourceFilePaths_Project_0E1A4474F1B4E27616865CEADA6F698FA2D0AD27" xml:space="preserve">SourceFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;SourceFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#289">289</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_TextFilePaths_Project_1DE77C2AFC4352D5316D84173D41A995930A8225" xml:space="preserve">TextFilePaths&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">nothrow</span>&nbsp;<span class="kw">const</span>&nbsp;<a href="../../../../../../system/content/System.Base/doc/class_List_T_4E42CF5913BEB21F5260DEFEC239180C94460B11.html">List</a>&lt;<a href="../../../../../../system/content/System.Base/doc/class_String_CharT_CF8CFC76E94ACA12B05A3C1C384DFA2026CAADAC.html">String</a>&lt;<span class="kw">char</span>>>&amp;&nbsp;TextFilePaths()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../Cm.Ast/file/Project.cm.html#339">339</a>&nbsp;of&nbsp;<a href="../../Cm.Ast/file/Project.cm.html">Cm.Ast/Project.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+ </body>
+</html>
