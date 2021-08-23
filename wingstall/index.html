@@ -532,9 +532,9 @@
 	
 	<span class="syntax">
 		&lt;include file="<span class="attribute">file_name</span>"/><br/>
-		&lt;exclude file="<span class="attribute">file_name</span>" [cascade="true" | "false"]/><br/>
+		&lt;exclude file="<span class="attribute">file_name</span>" [cascade="true" | cascade="false"]/><br/>
 		&lt;include dir="<span class="attribute">dir_name</span>"/><br/>
-		&lt;exclude dir="<span class="attribute">dir_name</span>" [cascade="true" | "false"]/><br/>
+		&lt;exclude dir="<span class="attribute">dir_name</span>" [cascade="true" | cascade="false"]/><br/>
 	</span>
 	
 	<h4>Cardinality</h4>
@@ -590,9 +590,9 @@
 	<span class="syntax">
 		&lt;component name="sources"><br/>
 		<div class="indent">&lt;directory  name="src"></div>
-		<div class="double_indent">&lt;exclude dir="x64" cascade="true"></div>
-		<div class="double_indent">&lt;exclude dir="Debug" cascade="true"></div>
-		<div class="double_indent">&lt;exclude dir="Release" cascade="true"></div>
+		<div class="double_indent">&lt;exclude dir="x64" cascade="true"/></div>
+		<div class="double_indent">&lt;exclude dir="Debug" cascade="true"/></div>
+		<div class="double_indent">&lt;exclude dir="Release" cascade="true"/></div>
 		<div class="indent">&lt;/directory></div>
 		&lt;/component>
 	</span>
