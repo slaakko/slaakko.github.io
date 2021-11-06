@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Farthest Error and State</title>
+    <link href="../../style/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>
+        Farthest Error and State
+    </h1>
+	
+	<h2>Minixml parser</h2>
+	
+	<p>
+		Take a look at the following <em>minixml.parser:</em>
+	</p>
+
+<pre>
+[cpp]#include &lt;soulng/parser/Range.hpp>
+[cpp]#include &lt;soulng/lexer/TrivialLexer.hpp>
+
+parser minixml
+{
+    uselexer TrivialLexer;
+    main;
+	
+    document
+        ::= spaces:s1? element:e spaces:s2?
+        ;
+		
+    element
+        ::= '<' name:n1
+        (   '>'
+            element_content:ec
+            "&lt;/" name:n2 '>'
+        |   "/>"
+        )
+        ;
+
+    spaces
+        ::= "[ \t\r\n]"+
+    ;
+
+    name
+        ::= name_start_char:nsc name_char:nc*
+        ;
+
+    name_start_char
+        ::= "[A-Za-z_]"
+        ;
+
+    name_char
+        ::= name_start_char:nsc | "[0-9]"
+        ;
+
+    element_content
+        ::= 
+        (   element:e
+        |   text:t
+        )*
+        ;
+
+    text
+        ::= "[^<]"+
+        ;
+}
+</pre>
+
+<h2>Input</h2>
+
+<p>
+	The previous parser accepts XML-like documents like the following <em>philosophers.xml</em>:
+</p>
+	
+<pre>
+&lt;philosophers>
+ &lt;philosopher>Socrates&lt;/philosopher>
+ &lt;philosopher>Plato&lt;/philosopher>
+ &lt;philosopher>Aristotle&lt;/philosopher;>
+ &lt;philosopher>Pythagoras&lt;/philosopher>
+&lt;/philosophers>
+</pre>	
+
+<p>	
+	Here's a test program that reads the <em>philosophers.xml</em> and parses it:
+</p>
+
+<h2>Main program</h2>
+
+<pre>
+#include &lt;minixml.hpp>
+#include &lt;soulng/util/Unicode.hpp>
+#include &lt;soulng/util/MappedInputFile.hpp>
+#include &lt;soulng/lexer/TrivialLexer.hpp>
+#include &lt;iostream>
+
+using namespace soulng::unicode;
+using namespace soulng::util;
+
+int main()
+{
+    try
+    {
+        std::string fileName = "philosophers.xml";
+        std::string file = ReadFile(fileName);
+        std::u32string content = ToUtf32(file);
+        TrivialLexer lexer(content, fileName, 0);
+        minixml::Parse(lexer);
+    }
+    catch (const std::exception& ex)
+    {
+        std::cerr << ex.what() << std::endl;
+        return 1;
+    }
+    return 0;
+}
+</pre>
+
+<h2>Testing</h2>
+
+<p>
+	If I run the program I get the following output:
+</p>
+
+<pre>
+>minixml
+parsing error at 'philosophers.xml:1': document expected:
+<philosophers>
+^
+</pre>
+
+<p>
+	Apparently the input contains an error, but the error message claims that the error is in the start 
+	of the input file at line number 1, not in the middle where the error actually is.
+</p>
+
+<p>
+	The problem with backtracking parsers lacking <a href="../syntax/parser.html#expectation">expectation</a> 
+	expressions is that either the parser accepts the entire input, 
+	if the input is good, or it reports the error to be in the start of the input, if the input is not good. 
+</p>
+
+<h2>Minixml with farthest error declaration</h2>
+
+<p>
+	I can get better error messages if I use the <strong>farthest_error</strong> declaration:
+</p>
+
+<pre>
+[cpp]#include &lt;soulng/parser/Range.hpp>
+[cpp]#include &lt;soulng/lexer/TrivialLexer.hpp>
+
+parser minixml
+{
+    uselexer TrivialLexer;
+    farthest_error;
+    main;
+    // ...
+}
+</pre>
+
+<h2>Main program with farthest error detection</h2>
+
+<p>
+	The main program needs also a modification:
+</p>
+
+<pre>
+#include &lt;minixml.hpp>
+#include &lt;soulng/util/Unicode.hpp>
+#include &lt;soulng/util/MappedInputFile.hpp>
+#include &lt;soulng/lexer/TrivialLexer.hpp>
+#include &lt;iostream>
+
+using namespace soulng::unicode;
+using namespace soulng::util;
+
+int main()
+{
+    try
+    {
+        std::string fileName = "philosophers.xml";
+        std::string file = ReadFile(fileName);
+        std::u32string content = ToUtf32(file);
+        TrivialLexer lexer(content, fileName, 0);
+        lexer.SetFlag(soulng::lexer::LexerFlags::farthestError);
+        minixml::Parse(lexer);
+    }
+    catch (const std::exception& ex)
+    {
+        std::cerr << ex.what() << std::endl;
+        return 1;
+    }
+    return 0;
+}
+</pre>
+
+<p>
+	I have set the <strong>LexerFlags::farthestError</strong> flag of the lexer. 
+	Otherwise the main program is the same as before.
+</p>
+
+<h2>Testing farthest error</h2>
+
+<p>
+	Now if I run the program I get the following output:
+</p>
+
+<pre>
+>minixml.exe
+parsing error at 'philosophers.xml:4':
+ &lt;philosopher>Aristotle&lt;/philosopher;>
+                                    ^
+</pre>
+
+<p>
+	Now the error location is more accurate.
+</p>
+
+<h2>How it works</h2>
+
+<p>
+    A parser with a <strong>farthest_error</strong> declaration keeps track of the farthest position 
+	the lexer has reached. If the input contains a parsing error, the error message points to this location.	
+</p>
+
+<h2>State</h2>
+
+<p>
+	In addition to farthest error declaration there's a declaration that may be useful in parser debugging:
+	the <strong>state</strong> declaration. When parsing input with a parser that has a <em>state</em> declaration
+	the lexer and the parser keep track of current parsing state. In case of a parsing error the error message
+	includes the state of the parser when the error is detected.
+	Here's a parser that has a <em>state</em> declaration:
+</p>
+
+<pre>
+[cpp]#include &lt;soulng/parser/Range.hpp>
+[cpp]#include &lt;soulng/lexer/TrivialLexer.hpp>
+
+parser minixml
+{
+    uselexer TrivialLexer;
+    farthest_error;
+    state;
+    main;
+    // ...
+}
+</pre>
+
+<h2>Rules</h2>
+
+<p>
+When using the <em>state</em> declaration, a modification is needed in the <em>minixml.spg</em> file.
+A <em>rules</em> clause:
+</p>
+
+<pre>
+project minixml;
+source &lt;minixml.parser>;
+rules &lt;rules>;
+</pre>
+
+<p>
+	The <em>rules</em> clause declares a base file name without an extension 
+	that is used by the parser generator for putting the names of parsing rules.
+	In this case the base name is <em>rules</em>, so <em>spg</em> generates 
+	two files: <em>rules.cpp</em> that will contain a rule names in a vector and
+	<em>rules.hpp</em> that will contain a declaration for the rule name vector getter function
+	and constants for the rules.
+</p>
+
+<h2>Main program with farthest error and state detection</h2>
+
+<p>
+	The main program needs also some modifications:
+</p>
+
+<pre>
+#include &lt;minixml.hpp>
+#include &lt;rules.hpp>
+#include &lt;soulng/util/Unicode.hpp>
+#include &lt;soulng/util/MappedInputFile.hpp>
+#include &lt;soulng/lexer/TrivialLexer.hpp>
+#include &lt;iostream>
+
+using namespace soulng::unicode;
+using namespace soulng::util;
+
+int main()
+{
+    try
+    {
+        std::string fileName = "philosophers.xml";
+        std::string file = ReadFile(fileName);
+        std::u32string content = ToUtf32(file);
+        TrivialLexer lexer(content, fileName, 0);
+        lexer.SetFlag(soulng::lexer::LexerFlags::farthestError);
+        lexer.SetRuleNameVecPtr(GetRuleNameVecPtr());
+        minixml::Parse(lexer);
+    }
+    catch (const std::exception& ex)
+    {
+        std::cerr << ex.what() << std::endl;
+        return 1;
+    }
+    return 0;
+}
+</pre>
+
+<p>
+I have added an include directive for the <em>rules.hpp</em> header file and a
+<strong>lexer.SetRuleNameVecPtr</strong> function call so that the lexer has access to the names of the parsing rules.
+</p>
+
+<h2>Testing farthest error and state</h2>
+
+<p>
+	Now if I run the program I get the following output:
+</p>
+
+<pre>
+>minixml.exe
+parsing error at 'philosophers.xml:4':
+ &lt;philosopher>Aristotle&lt;/philosopher;>
+                                    ^
+
+Parser state:
+minixml.document
+minixml.element
+minixml.element_content
+minixml.element
+minixml.name
+minixml.name_char
+minixml.name_start_char
+</pre>
+
+<p>
+The parser state that contains the names of the parsing rules at the moment of error are included in the error message.
+</p>
+
+</body>
+</html>
