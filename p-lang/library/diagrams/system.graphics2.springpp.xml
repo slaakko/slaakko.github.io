@@ -59,34 +59,31 @@
    <bounds height="3.943945" width="48.858505" x="88.501480" y="89.107620"/>
   </operation>
  </classElement>
- <classElement abstract="false" keyword="" name="ShapeArray">
-  <bounds height="6.943945" width="22.416897" x="183.000000" y="19.859861"/>
+ <classElement abstract="false" keyword="" name="ShapeList">
+  <bounds height="6.943945" width="19.686832" x="183.000000" y="19.859861"/>
  </classElement>
  <classElement abstract="false" keyword="" name="CompoundShape">
-  <bounds height="44.495506" width="75.481857" x="166.000000" y="54.000000"/>
-  <attribute name="count: integer">
-   <bounds height="3.943945" width="20.872622" x="167.500000" y="62.443947"/>
-  </attribute>
-  <attribute name="components: ShapeArray">
-   <bounds height="3.943945" width="37.956844" x="167.500000" y="66.387894"/>
+  <bounds height="40.551559" width="75.481857" x="166.000000" y="54.000000"/>
+  <attribute name="components: ShapeList">
+   <bounds height="3.943945" width="35.234531" x="167.500000" y="62.443947"/>
   </attribute>
   <operation abstract="false" name="constructor()">
-   <bounds height="3.943945" width="19.409145" x="167.500000" y="73.331833"/>
+   <bounds height="3.943945" width="19.409145" x="167.500000" y="69.387894"/>
   </operation>
   <operation abstract="false" name="procedure Print(); override">
-   <bounds height="3.943945" width="39.220333" x="167.500000" y="77.275780"/>
+   <bounds height="3.943945" width="39.220333" x="167.500000" y="73.331841"/>
   </operation>
   <operation abstract="false" name="procedure Add(shape: Shape)">
-   <bounds height="3.943945" width="44.866501" x="167.500000" y="81.219727"/>
+   <bounds height="3.943945" width="44.866501" x="167.500000" y="77.275787"/>
   </operation>
   <operation abstract="false" name="procedure Measure(graphics: Graphics); override">
-   <bounds height="3.943945" width="72.481857" x="167.500000" y="85.163673"/>
+   <bounds height="3.943945" width="72.481857" x="167.500000" y="81.219734"/>
   </operation>
   <operation abstract="false" name="procedure Draw(graphics: Graphics); override">
-   <bounds height="3.943945" width="67.389145" x="167.500000" y="89.107620"/>
+   <bounds height="3.943945" width="67.389145" x="167.500000" y="85.163681"/>
   </operation>
   <operation abstract="false" name="function CombinedBouinds(): Rect">
-   <bounds height="3.943945" width="50.859932" x="167.500000" y="93.051567"/>
+   <bounds height="3.943945" width="50.859932" x="167.500000" y="89.107628"/>
   </operation>
  </classElement>
  <classElement abstract="false" keyword="subroutines" name="">
