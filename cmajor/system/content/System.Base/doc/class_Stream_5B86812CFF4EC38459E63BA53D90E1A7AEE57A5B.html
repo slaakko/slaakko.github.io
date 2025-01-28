@@ -1,0 +1,162 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Stream Abstract Class</title>
+  <link href="../../../style/style.css" rel="stylesheet" type="text/css"/>
+  <script src="class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B_inheritance.js" type="text/javascript"> </script>
+ </head>
+ <body onload="drawInheritanceDiagram()">
+  <h1>Stream Abstract Class</h1>
+  <span class="indent">
+   <a href="#ctorDtors">Constructors &amp; Destructor</a>
+    | <a href="#memberFunctions">Member Functions</a>
+  </span>
+  <p class="description" xml:space="preserve">Represents a stream of bytes.</p>
+  <h2>Definition</h2>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#15">15</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <h2>Inheritance</h2>
+  <div class="diagram">
+   <svg height="0" id="inheritance_svg_diagram" version="2.0" width="0" xmlns="http://www.w3.org/2000/svg"/>
+  </div>
+  <h2 id="ctorDtors">Constructors &amp; Destructor</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#default_constructor_Stream_C9C989B4F5A6348CE0BF010FE4A3102C918D0EA0">Stream</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">suppress</span></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#copy_constructor_Stream_D4D0E493D8A75ED8F82DC4CF117C46788CB0BF72">Stream</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;)</td>
+   </tr>
+  </table>
+  <h2 id="memberFunctions">Member Functions</h2>
+  <table>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_CopyTo_Stream_7DABA2E65F31B67D81CCF98F9C4DE615FD449BCC">CopyTo</a>(<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;&nbsp;destination)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_CopyTo_Stream_9B6D6E4ECB89DEF654E0C86ABCDD927BC002BFA2">CopyTo</a>(<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;&nbsp;destination, <span class="kw">long</span>&nbsp;bufferSize)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_Flush_Stream_9F965C1C1EA86B5B8C6832CAF470B5623106FFB9">Flush</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">long</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_Read_Stream_86299852E1EE9CDFEF0549944D16E827AB1024BA">Read</a>(<span class="kw">byte</span>*&nbsp;buf, <span class="kw">long</span>&nbsp;count)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">int</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_ReadByte_Stream_9C3B83209E5A2C0FCDBF0C949C54E3F4AFF81FAC">ReadByte</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_Seek_Stream_28053DFD57B38A0E92AF365FA48F6827869BF346">Seek</a>(<span class="kw">long</span>&nbsp;pos, <a href="../../System.Base/doc/enumerated_type_Origin_A770811A120AA0D85B3AD4E90D4A9AF5ADC90D70.html">Origin</a>&nbsp;origin)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">long</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_Tell_Stream_35F7AE5982F3B6DB557807392EC7757E55EC0DFA">Tell</a>()</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_Write_Stream_3E652A2DF3D9BFFF981CB80B19BC6571A2239F72">Write</a>(<span class="kw">byte</span>&nbsp;x)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#member_function_Write_Stream_57E791D1DCD277F96D3B9A26EC8A4B61812C1BFD">Write</a>(<span class="kw">byte</span>*&nbsp;buf, <span class="kw">long</span>&nbsp;count)</td>
+   </tr>
+   <tr>
+    <td class="rightAlignedCol" xml:space="preserve"><span class="kw">suppress</span>&nbsp;<span class="kw">void</span></td>
+    <td xml:space="preserve"><a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html#copy_assignment_op_assign_Stream_C409854FC7A4248E6D9C7D9BFA9AF8DEF10492A7">operator=</a>(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;)</td>
+   </tr>
+  </table>
+  <h2>Constructor&amp; Destructor Details</h2>
+  <h3 id="default_constructor_Stream_C9C989B4F5A6348CE0BF010FE4A3102C918D0EA0" xml:space="preserve">Stream&nbsp;Constructor</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;Stream()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#17">17</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="copy_constructor_Stream_D4D0E493D8A75ED8F82DC4CF117C46788CB0BF72" xml:space="preserve">Stream&nbsp;Constructor</h3>
+  <h4 xml:space="preserve"><span class="kw">suppress</span>&nbsp;Stream(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#18">18</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h2>Member Function Details</h2>
+  <h3 id="member_function_CopyTo_Stream_7DABA2E65F31B67D81CCF98F9C4DE615FD449BCC" xml:space="preserve">CopyTo&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>>&nbsp;CopyTo(<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;&nbsp;destination)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#53">53</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_CopyTo_Stream_9B6D6E4ECB89DEF654E0C86ABCDD927BC002BFA2" xml:space="preserve">CopyTo&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>>&nbsp;CopyTo(<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;&nbsp;destination, <span class="kw">long</span>&nbsp;bufferSize)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#58">58</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Flush_Stream_9F965C1C1EA86B5B8C6832CAF470B5623106FFB9" xml:space="preserve">Flush&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>>&nbsp;Flush()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#30">30</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Read_Stream_86299852E1EE9CDFEF0549944D16E827AB1024BA" xml:space="preserve">Read&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">long</span>>&nbsp;Read(<span class="kw">byte</span>*&nbsp;buf, <span class="kw">long</span>&nbsp;count)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#25">25</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_ReadByte_Stream_9C3B83209E5A2C0FCDBF0C949C54E3F4AFF81FAC" xml:space="preserve">ReadByte&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">int</span>>&nbsp;ReadByte()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#23">23</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Seek_Stream_28053DFD57B38A0E92AF365FA48F6827869BF346" xml:space="preserve">Seek&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>>&nbsp;Seek(<span class="kw">long</span>&nbsp;pos, <a href="../../System.Base/doc/enumerated_type_Origin_A770811A120AA0D85B3AD4E90D4A9AF5ADC90D70.html">Origin</a>&nbsp;origin)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#35">35</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Tell_Stream_35F7AE5982F3B6DB557807392EC7757E55EC0DFA" xml:space="preserve">Tell&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">virtual</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">long</span>>&nbsp;Tell()</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#44">44</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Write_Stream_3E652A2DF3D9BFFF981CB80B19BC6571A2239F72" xml:space="preserve">Write&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>>&nbsp;Write(<span class="kw">byte</span>&nbsp;x)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#27">27</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="member_function_Write_Stream_57E791D1DCD277F96D3B9A26EC8A4B61812C1BFD" xml:space="preserve">Write&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">public</span>&nbsp;<span class="kw">abstract</span>&nbsp;<a href="../../System.Base/doc/class_Result_04842AB1C9F4CA1EAD0D7305C26153EEAE534E78.html">Result</a>&lt;<span class="kw">bool</span>>&nbsp;Write(<span class="kw">byte</span>*&nbsp;buf, <span class="kw">long</span>&nbsp;count)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#29">29</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+  <h3 id="copy_assignment_op_assign_Stream_C409854FC7A4248E6D9C7D9BFA9AF8DEF10492A7" xml:space="preserve">operator=&nbsp;Member Function</h3>
+  <h4 xml:space="preserve"><span class="kw">suppress</span>&nbsp;<span class="kw">void</span>&nbsp;operator=(<span class="kw">const</span>&nbsp;<a href="../../System.Base/doc/class_Stream_5B86812CFF4EC38459E63BA53D90E1A7AEE57A5B.html">Stream</a>&amp;)</h4>
+  <h5>Definition</h5>
+  <span class="indent" xml:space="preserve">Line&nbsp;<a href="../../System.Base/file/Stream.cm.html#19">19</a>&nbsp;of&nbsp;<a href="../../System.Base/file/Stream.cm.html">System.Base/Stream.cm</a></span>
+  <br/>
+  <br/>
+  <hr/>
+ </body>
+</html>

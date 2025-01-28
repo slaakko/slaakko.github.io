@@ -6,7 +6,7 @@
  </head>
  <body>
   <h1>System Reference</h1>
-  <p class="description" xml:space="preserve">The Cmajor System Library consists of nineteen modules. The <a href="content/System.Base/index.html"> System.Base</a> module constitutes the major part of the System Library.</p>
+  <p class="description" xml:space="preserve">The Cmajor System Library consists of sixteen modules. The <a href="content/System.Base/index.html"> System.Base</a> module constitutes a major part of the System Library.</p>
   <h2>Modules</h2>
   <table>
    <tr>
@@ -14,7 +14,7 @@
      <a href="content/System.Windows.Install/index.html">System.Windows.Install</a>
     </td>
     <td>
-     The System.Windows.Install module is a special module that takes care of installing the System and System.Windows libraries to cmajor/system/lib/&lt;config> directory. It contains no source code entities, but references the <a href="content/System/doc/../../System.Windows/index.html">System.Windows</a>
+     The System.Windows.Install module is a special module that takes care of installing the System and System.Windows libraries to cmajor/system/lib/&lt;backend>/&lt;config> directory. It contains no source code entities, but references the <a href="content/System/doc/../../System.Windows/index.html">System.Windows</a>
       module.</td>
    </tr>
    <tr>
@@ -42,7 +42,7 @@
     <td>
      <a href="content/System.Xml.Serialization/index.html">System.Xml.Serialization</a>
     </td>
-    <td>Library support for XML serialization.</td>
+    <td>The System.Xml.Serialization module contains library support for XML serialization.</td>
    </tr>
    <tr>
     <td>
@@ -60,49 +60,11 @@
    </tr>
    <tr>
     <td>
-     <a href="content/System.Numerics.Multiprecision/index.html">System.Numerics.Multiprecision</a>
-    </td>
-    <td>
-     The System.Numerics.Multiprecision library provides three arbitrary precision number classes <a href="content/System/doc/../../System.Numerics.Multiprecision/doc/class_BigInt_9326EADB23C0E0FE1858A97CCC64FF60DD2A22D0.html">BigInt</a>
-      , <a href="content/System/doc/../../System.Numerics.Multiprecision/doc/class_BigRational_0F62DE7516E5ADB5CE79939E2167456710EF7B23.html">BigRational</a>
-      and <a href="content/System/doc/../../System.Numerics.Multiprecision/doc/class_BigFloat_BC19EFB82C8E666524B4436C56800B572EFBED53.html">BigFloat</a>
-      and arithmetic operations for them. It is implemented by means of <a href="https://www.boost.org/"> Boost.Multiprecision library</a>
-      .</td>
-   </tr>
-   <tr>
-    <td>
-     <a href="content/System.Net.Http/index.html">System.Net.Http</a>
-    </td>
-    <td>The System.Net.Http module contains a simple HTTP/1.1 client and URI parser.</td>
-   </tr>
-   <tr>
-    <td>
-     <a href="content/System.Net.Sockets/index.html">System.Net.Sockets</a>
-    </td>
-    <td>The System.Net.Sockets module provides client and server-side synchronous network socket connections.</td>
-   </tr>
-   <tr>
-    <td>
      <a href="content/System.Json/index.html">System.Json</a>
     </td>
     <td>
      The System.Json module contains support for <a href="https://www.json.org/"> JSON</a>
       serialization.</td>
-   </tr>
-   <tr>
-    <td>
-     <a href="content/System.Init/index.html">System.Init</a>
-    </td>
-    <td>The System.Init library does dynamic initialization before program main function is called.</td>
-   </tr>
-   <tr>
-    <td>
-     <a href="content/System.IO.Compression/index.html">System.IO.Compression</a>
-    </td>
-    <td>
-     The System.IO.Compression module contains data compression/decompression streams. It is implemented by means of <a href="http://www.zlib.net/"> zlib</a>
-      and <a href="http://www.sourceware.org/bzip2/"> bzip2</a>
-      libraries.</td>
    </tr>
    <tr>
     <td>
@@ -123,9 +85,23 @@
    </tr>
    <tr>
     <td>
+     <a href="content/System.IO.Compression/index.html">System.IO.Compression</a>
+    </td>
+    <td>
+     The System.IO.Compression module contains data compression/decompression streams. It is implemented by means of the <a href="http://www.zlib.net/"> zlib</a>
+      library.</td>
+   </tr>
+   <tr>
+    <td>
      <a href="content/System.Parsing/index.html">System.Parsing</a>
     </td>
     <td>The System.Parsing module contains parsing helper classes.</td>
+   </tr>
+   <tr>
+    <td>
+     <a href="content/System.Net.Sockets/index.html">System.Net.Sockets</a>
+    </td>
+    <td>The System.Net.Sockets module provides client and server-side synchronous network socket connections.</td>
    </tr>
    <tr>
     <td>
@@ -143,9 +119,7 @@
     <td>
      <a href="content/System.Runtime/index.html">System.Runtime</a>
     </td>
-    <td>
-     The System.Runtime module contains symbols for functions that form the lowest level of the Cmajor runtime library. The functions themselves are defined in the <a href="../compiler/reference/rt/rt.html"> rt</a>
-      library written in C++.</td>
+    <td>The System.Runtime module contains symbols for functions that form the lowest level of the Cmajor runtime library. The functions themselves are defined in libraries written in C++.</td>
    </tr>
    <tr>
     <td>

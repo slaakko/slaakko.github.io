@@ -1,62 +1,30 @@
 using System;
-using System.IO;
 
-public interface Reader
+public interface Fooable
 {
-    long Read(byte* buf, long count);
+    void Foo();
 }
 
-public interface Writer
+public class Fooer : Fooable
 {
-    void Write(byte* buf, long count);
-}
-
-public void Copy(Reader reader, Writer writer)
-{
-    byte[16] buf;
-    long bytesRead = reader.Read(&buf[0], buf.Length());
-    while (bytesRead > 0)
-    {
-        writer.Write(&buf[0], bytesRead);
-        bytesRead = reader.Read(&buf[0], buf.Length());
-    }
-}
-
-public class StringReader : Reader
-{
-    public StringReader(const string& s_) : s(s_), pos(0)
+    public Fooer() : foo("foo")
     {
     }
-    public long Read(byte* buf, long count)
+    public void Foo()
     {
-        long bytesLeft = s.Length() - pos;
-        long bytesRead = Min(bytesLeft, count);
-        for (long i = 0; i < bytesRead; ++i)
-        {
-            buf[i] = cast<byte>(s[pos + i]);
-        }
-        pos = pos + bytesRead;
-        return bytesRead;
+        Console.Out() << foo << endl();
     }
-    private string s;
-    private long pos;
-}
-
-public class ConsoleWriter : Writer
-{
-    public ConsoleWriter() : standardOutputStream(stdout)
-    {
-    }
-    public void Write(byte* buf, long count)
-    {
-        standardOutputStream.Write(buf, count);
-    }
-    private FileByteStream standardOutputStream;
+    private string foo;
 }
 
 void main()
 {
-    StringReader stringReader("Nothing is impossible, the word itself says 'I'm possible'!\n");
-    ConsoleWriter consoleWriter;
-    Copy(stringReader, consoleWriter);
+    Fooer fooer;
+    Fooable fooable = fooer;
+    fooable.Foo();
+
+    UniquePtr<Fooer> fooer2(new Fooer());
+    Fooer* fooerPtr = fooer2.Get();
+    Fooable fooable2 = *fooerPtr;
+    fooable2.Foo();
 }
